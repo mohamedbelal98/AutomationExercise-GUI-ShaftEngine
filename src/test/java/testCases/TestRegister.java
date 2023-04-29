@@ -34,7 +34,7 @@ public class TestRegister extends BaseTest {
 
         SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
 
-        signUpAndLogInPage.VerifySignUpAndLogInTextIsVisible();
+        signUpAndLogInPage.verifySignUpAndLogInTextIsVisible();
 
         signUpAndLogInPage.newUserSignUp(
                 jsonFileManager.getTestData("name"),

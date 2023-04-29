@@ -11,6 +11,7 @@ public class HomePage {
     private final By signUpAndLoginLocator = By.xpath("//a[contains(. , ' Signup / Login')]");
     private final By loggedInAsLocator = By.xpath("//a[contains( . , ' Logged in as ')]");
     private final By deleteAccountButton = By.xpath("//a[contains( . , ' Delete Account')]");
+    private final By logoutButton = By.xpath("//a[contains( . , ' Logout')]");
 
     public HomePage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
@@ -39,6 +40,11 @@ public class HomePage {
 
         driver.element().click(deleteAccountButton);
         return new AccountPage(driver);
+    }
+
+    public void clickLogoutButton() {
+
+        driver.element().click(logoutButton);
     }
 
 }

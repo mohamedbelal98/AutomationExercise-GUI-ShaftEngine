@@ -1,0 +1,32 @@
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+                                        Starting Execution: '1 out of 1' test cases in the current suite                                        
+                                    Test Method: 'testCases.TestLogin.LoginUserWithIncorrectEmailAndPassword'                                    
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+[ReportManager] Attempting to getAttribute "hidden" from elementLocator "By.xpath: //img[@alt='Website for automation practice']". @29-04-2023 19:25:17.0719 PM
+[ReportManager] Get attribute from "Website for automation practice". @29-04-2023 19:25:18.0001 PM
+[ReportManager] Expected "null", and actual "null" @29-04-2023 19:25:18.0008 PM
+[ReportManager] Assertion "ValidateElementAttribute" PASSED. Expected "Value Should be 'null' for the 'hidden' attribute, element locator 'By.xpath: //img[@alt='Website for automation practice']'" and Actual "null". Comparison Type "EQUALS". Validation Type "POSITIVE". @29-04-2023 19:25:24.0695 PM
+[ReportManager] Assertion Passed: Verify that home page is visible successfully @29-04-2023 19:25:24.0696 PM
+[ReportManager] Successfully created attachment 'Screenshot - 1682789122128_LoginUserWithIncorrectEmailAndPassword_ValidateElementAttribute_passed' @29-04-2023 19:25:24.0771 PM
+[ReportManager] Click " Signup / Login". @29-04-2023 19:25:25.0114 PM
+[ReportManager] Attempting to getAttribute "hidden" from elementLocator "By.xpath: //div[@class='login-form']/child::h2". @29-04-2023 19:25:27.0372 PM
+[ReportManager] Get attribute from "Login to your account". @29-04-2023 19:25:27.0544 PM
+[ReportManager] Expected "null", and actual "null" @29-04-2023 19:25:27.0545 PM
+[ReportManager] Assertion "ValidateElementAttribute" PASSED. Expected "Value Should be 'null' for the 'hidden' attribute, element locator 'By.xpath: //div[@class='login-form']/child::h2'" and Actual "null". Comparison Type "EQUALS". Validation Type "POSITIVE". @29-04-2023 19:25:28.0151 PM
+[ReportManager] Assertion Passed: Verify 'New User Signup!' is visible @29-04-2023 19:25:28.0152 PM
+[ReportManager] Successfully created attachment 'Screenshot - 1682789127897_LoginUserWithIncorrectEmailAndPassword_ValidateElementAttribute_passed' @29-04-2023 19:25:28.0155 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/login.json"". @29-04-2023 19:25:28.0159 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/login.json"". @29-04-2023 19:25:28.0160 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/login.json"". @29-04-2023 19:25:31.0102 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/login.json"". @29-04-2023 19:25:31.0105 PM
+[ReportManager] Type "test@test.com" into "Email Address". @29-04-2023 19:25:31.0377 PM
+[ReportManager] Type "1234512345" into "Password". @29-04-2023 19:25:31.0574 PM
+[ReportManager] Click "Login". @29-04-2023 19:25:31.0825 PM
+[ReportManager] Attempting to getAttribute "hidden" from elementLocator "By.xpath: //p[@style='color: red;']". @29-04-2023 19:25:33.0721 PM
+[ReportManager] Get attribute from "By.xpath: //p[@style='color: red;']". @29-04-2023 19:25:33.0834 PM
+[ReportManager] Expected "null", and actual "null" @29-04-2023 19:25:33.0834 PM
+[ReportManager] Assertion "ValidateElementAttribute" PASSED. Expected "Value Should be 'null' for the 'hidden' attribute, element locator 'By.xpath: //p[@style='color: red;']'" and Actual "null". Comparison Type "EQUALS". Validation Type "POSITIVE". @29-04-2023 19:25:34.0541 PM
+[ReportManager] Assertion Passed: Verify error 'Your email or password is incorrect!' is visible @29-04-2023 19:25:34.0542 PM
+[ReportManager] Successfully created attachment 'Screenshot - 1682789134183_LoginUserWithIncorrectEmailAndPassword_ValidateElementAttribute_passed' @29-04-2023 19:25:34.0544 PM
