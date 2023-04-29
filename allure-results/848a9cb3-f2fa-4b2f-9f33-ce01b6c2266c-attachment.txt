@@ -1,0 +1,158 @@
+[INFO ] 2023-04-29 15:20:29.264 [main] ReportManager - 
+------------------------------------------------------------------------------------------------------------------------------------------------
+                                                      Powered by SHAFT Engine v7.2.20230425                                                      
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+[INFO ] 2023-04-29 15:20:31.367 [main] ReportManager - Loaded OpenCV "opencv_java470".
+[INFO ] 2023-04-29 15:20:31.392 [main] ReportManager - File Action "DeleteFolder" successfully performed. With the following test data "Target Folder: "execution-summary"".
+[INFO ] 2023-04-29 15:20:31.397 [main] ReportManager - Initializing Allure Reporting Environment...
+[INFO ] 2023-04-29 15:20:31.721 [main] ReportManager - Initializing Extent Reporting Environment...
+[INFO ] 2023-04-29 15:20:33.325 [main] Utils - [TestNG] Running:
+  C:\Users\HELAL\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+[INFO ] 2023-04-29 15:20:33.361 [main] ReportManager - 
+------------------------------------------------------------------------------------------------------------------------------------------------
+                                             Starting execution of suite setup configuration method                                             
+                                          'com.shaft.listeners.internal.ConfigurationHelper.suiteSetup'                                          
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+[INFO ] 2023-04-29 15:20:33.517 [main] ReportManager - Initializing Important Links...
+[INFO ] 2023-04-29 15:20:33.531 [main] ReportManager - Initializing Properties...
+[INFO ] 2023-04-29 15:20:33.731 [main] ReportManager - 
+------------------------------------------------------------------------------------------------------------------------------------------------
+                                                Starting execution of set up configuration method                                                
+                                                         'testCases.TestRegister.setUp'                                                         
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+[INFO ] 2023-04-29 15:20:33.771 [main] ReportManager - Setting "targetOperatingSystem" property with "WINDOWS".
+[INFO ] 2023-04-29 15:20:33.774 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "target/downloadedFiles/"".
+[INFO ] 2023-04-29 15:20:33.775 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/target/downloadedFiles/"".
+[INFO ] 2023-04-29 15:20:33.840 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "target/downloadedFiles/"".
+[INFO ] 2023-04-29 15:20:33.842 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/target/downloadedFiles/"".
+[INFO ] 2023-04-29 15:20:33.865 [main] ReportManager - Attempting to run locally on: "WINDOWS | Chrome".
+[INFO ] 2023-04-29 15:20:33.866 [main] ReportManager - Identifying OS/Driver combination and selecting the correct driver version automatically. Please note that if a new driver executable will be downloaded it may take some time...
+[DEBUG] 2023-04-29 15:20:34.542 [main] ResolutionCache - Resolution chrome=112 in cache (valid until 16:15:47 29/04/2023 EET)
+[DEBUG] 2023-04-29 15:20:34.544 [main] ResolutionCache - Resolution chrome112=112.0.5615.49 in cache (valid until 14:09:05 30/04/2023 EET)
+[INFO ] 2023-04-29 15:20:34.545 [main] WebDriverManager - Using chromedriver 112.0.5615.49 (resolved driver for Chrome 112)
+[DEBUG] 2023-04-29 15:20:34.568 [main] WebDriverManager - Driver chromedriver 112.0.5615.49 found in cache
+[INFO ] 2023-04-29 15:20:34.570 [main] WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\HELAL\.cache\selenium\chromedriver\win32\112.0.5615.49\chromedriver.exe
+[WARN ] 2023-04-29 15:20:35.228 [Exec Stream Pumper] ReportManager - Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 20280
+[WARN ] 2023-04-29 15:20:35.229 [Exec Stream Pumper] ReportManager - Only local connections are allowed.
+[WARN ] 2023-04-29 15:20:35.229 [Exec Stream Pumper] ReportManager - Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[WARN ] 2023-04-29 15:20:35.243 [Exec Stream Pumper] ReportManager - ChromeDriver was started successfully.
+[INFO ] 2023-04-29 15:20:37.369 [main] ReportManager - Successfully Opened: "WINDOWS | Chrome".
+[INFO ] 2023-04-29 15:20:37.540 [main] ReportManager - Target URL: "https://automationexercise.com/"
+[INFO ] 2023-04-29 15:20:47.125 [main] ReportManager - Navigate to url "https://automationexercise.com/".
+[INFO ] 2023-04-29 15:20:47.129 [main] ReportManager - 
+------------------------------------------------------------------------------------------------------------------------------------------------
+                                             Starting execution of before class configuration method                                             
+                                                      'testCases.TestRegister.beforeClass'                                                      
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+[INFO ] 2023-04-29 15:20:47.132 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:20:47.132 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:20:47.133 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:20:47.136 [main] ReportManager - Successfully created attachment 'Test Data - JSON'
+[INFO ] 2023-04-29 15:20:47.180 [main] ReportManager - 
+------------------------------------------------------------------------------------------------------------------------------------------------
+                                        Starting Execution: '1 out of 1' test cases in the current suite                                        
+                                               Test Method: 'testCases.TestRegister.RegisterUser'                                               
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+[INFO ] 2023-04-29 15:20:47.197 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:20:47.198 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:20:50.587 [main] ReportManager - Attempting to getAttribute "hidden" from elementLocator "By.xpath: //img[@alt='Website for automation practice']".
+[INFO ] 2023-04-29 15:20:50.917 [main] ReportManager - Get attribute from "Website for automation practice".
+[INFO ] 2023-04-29 15:20:50.918 [main] ReportManager - Expected "null", and actual "null"
+[INFO ] 2023-04-29 15:20:57.311 [main] ReportManager - Assertion "ValidateElementAttribute" PASSED. Expected "Value Should be 'null' for the 'hidden' attribute, element locator 'By.xpath: //img[@alt='Website for automation practice']'" and Actual "null". Comparison Type "EQUALS". Validation Type "POSITIVE".
+[INFO ] 2023-04-29 15:20:57.422 [main] ReportManager - Successfully created attachment 'Screenshot - 1682774454728_RegisterUser_ValidateElementAttribute_passed'
+[INFO ] 2023-04-29 15:20:57.801 [main] ReportManager - Click " Signup / Login".
+[INFO ] 2023-04-29 15:20:59.188 [main] ReportManager - Attempting to getAttribute "hidden" from elementLocator "By.xpath: //div[@class='signup-form']//child::h2".
+[INFO ] 2023-04-29 15:20:59.927 [main] ReportManager - Get attribute from "New User Signup!".
+[INFO ] 2023-04-29 15:20:59.928 [main] ReportManager - Expected "null", and actual "null"
+[INFO ] 2023-04-29 15:21:00.530 [main] ReportManager - Assertion "ValidateElementAttribute" PASSED. Expected "Value Should be 'null' for the 'hidden' attribute, element locator 'By.xpath: //div[@class='signup-form']//child::h2'" and Actual "null". Comparison Type "EQUALS". Validation Type "POSITIVE".
+[INFO ] 2023-04-29 15:21:00.541 [main] ReportManager - Successfully created attachment 'Screenshot - 1682774460263_RegisterUser_ValidateElementAttribute_passed'
+[INFO ] 2023-04-29 15:21:00.543 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:00.543 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:00.886 [main] ReportManager - Type "Name" into "Name".
+[INFO ] 2023-04-29 15:21:01.122 [main] ReportManager - Type "test4433198@test.com" into "Email Address".
+[INFO ] 2023-04-29 15:21:01.386 [main] ReportManager - Click "Signup".
+[INFO ] 2023-04-29 15:21:04.017 [main] ReportManager - Attempting to getAttribute "hidden" from elementLocator "By.xpath: (//h2[@class='title text-center']/child::b)[1]".
+[INFO ] 2023-04-29 15:21:04.137 [main] ReportManager - Get attribute from "By.xpath: (//h2[@class='title text-center']/child::b)[1]".
+[INFO ] 2023-04-29 15:21:04.137 [main] ReportManager - Expected "null", and actual "null"
+[INFO ] 2023-04-29 15:21:05.012 [main] ReportManager - Assertion "ValidateElementAttribute" PASSED. Expected "Value Should be 'null' for the 'hidden' attribute, element locator 'By.xpath: (//h2[@class='title text-center']/child::b)[1]'" and Actual "null". Comparison Type "EQUALS". Validation Type "POSITIVE".
+[INFO ] 2023-04-29 15:21:05.016 [main] ReportManager - Successfully created attachment 'Screenshot - 1682774464673_RegisterUser_ValidateElementAttribute_passed'
+[INFO ] 2023-04-29 15:21:05.017 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:05.018 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:05.046 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:05.047 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:05.070 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:05.071 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:05.095 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:05.096 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:05.354 [main] ReportManager - Click "Mr.".
+[INFO ] 2023-04-29 15:21:05.518 [main] ReportManager - Type "12345678" into "Password *".
+[INFO ] 2023-04-29 15:21:06.632 [main] ReportManager - Select "12" from "By.id: days".
+[INFO ] 2023-04-29 15:21:07.481 [main] ReportManager - Select "October" from "By.id: months".
+[INFO ] 2023-04-29 15:21:08.902 [main] ReportManager - Select "1998" from "By.id: years".
+[INFO ] 2023-04-29 15:21:09.223 [main] ReportManager - Click "Sign up for our newsletter!".
+[INFO ] 2023-04-29 15:21:09.473 [main] ReportManager - Click "Receive special offers from our partners!".
+[INFO ] 2023-04-29 15:21:09.473 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.474 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.500 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.500 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.528 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.529 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.555 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.556 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.579 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.580 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.608 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.608 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.636 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.638 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.663 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.664 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.708 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.710 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.796 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:09.797 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/register.json"".
+[INFO ] 2023-04-29 15:21:10.003 [main] ReportManager - Type "Mohamed" into "First name *".
+[INFO ] 2023-04-29 15:21:10.166 [main] ReportManager - Type "Belal" into "Last name *".
+[INFO ] 2023-04-29 15:21:10.327 [main] ReportManager - Type "company" into "Company".
+[INFO ] 2023-04-29 15:21:10.527 [main] ReportManager - Type "address1" into "Address * (Street address, P.O. Box, Company name, etc.)".
+[INFO ] 2023-04-29 15:21:10.724 [main] ReportManager - Type "address2" into "Address 2".
+[INFO ] 2023-04-29 15:21:11.187 [main] ReportManager - Select "United States" from "Country *".
+[INFO ] 2023-04-29 15:21:11.368 [main] ReportManager - Type "state" into "State *".
+[INFO ] 2023-04-29 15:21:11.568 [main] ReportManager - Type "city" into "City * Zipcode *".
+[INFO ] 2023-04-29 15:21:11.776 [main] ReportManager - Type "zipcode" into "By.id: zipcode".
+[INFO ] 2023-04-29 15:21:12.001 [main] ReportManager - Type "mobileNumber" into "Mobile Number *".
+[INFO ] 2023-04-29 15:21:12.281 [main] ReportManager - Click "Create Account".
+[INFO ] 2023-04-29 15:21:14.564 [main] ReportManager - Attempting to getAttribute "hidden" from elementLocator "By.xpath: //b[contains(.,'Account Created')]".
+[INFO ] 2023-04-29 15:21:14.854 [main] ReportManager - Get attribute from "By.xpath: //b[contains(.,'Account Created')]".
+[INFO ] 2023-04-29 15:21:14.854 [main] ReportManager - Expected "null", and actual "null"
+[INFO ] 2023-04-29 15:21:15.692 [main] ReportManager - Assertion "ValidateElementAttribute" PASSED. Expected "Value Should be 'null' for the 'hidden' attribute, element locator 'By.xpath: //b[contains(.,'Account Created')]'" and Actual "null". Comparison Type "EQUALS". Validation Type "POSITIVE".
+[INFO ] 2023-04-29 15:21:15.697 [main] ReportManager - Successfully created attachment 'Screenshot - 1682774475159_RegisterUser_ValidateElementAttribute_passed'
+[INFO ] 2023-04-29 15:21:15.956 [main] ReportManager - Click "Continue".
+[INFO ] 2023-04-29 15:21:26.253 [main] ReportManager - Attempting to getAttribute "hidden" from elementLocator "By.xpath: //a[contains( . , ' Logged in as ')]".
+[INFO ] 2023-04-29 15:21:26.362 [main] ReportManager - Get attribute from "By.xpath: //a[contains( . , ' Logged in as ')]".
+[INFO ] 2023-04-29 15:21:26.362 [main] ReportManager - Expected "null", and actual "null"
+[INFO ] 2023-04-29 15:21:32.654 [main] ReportManager - Assertion "ValidateElementAttribute" PASSED. Expected "Value Should be 'null' for the 'hidden' attribute, element locator 'By.xpath: //a[contains( . , ' Logged in as ')]'" and Actual "null". Comparison Type "EQUALS". Validation Type "POSITIVE".
+[INFO ] 2023-04-29 15:21:32.695 [main] ReportManager - Successfully created attachment 'Screenshot - 1682774489319_RegisterUser_ValidateElementAttribute_passed'
+[INFO ] 2023-04-29 15:21:32.914 [main] ReportManager - Click " Delete Account".
+[INFO ] 2023-04-29 15:21:32.971 [main] ReportManager - Attempting to getAttribute "hidden" from elementLocator "By.xpath: //b[contains(.,'Account Deleted!')]".
+[INFO ] 2023-04-29 15:21:38.343 [main] ReportManager - Get attribute from "By.xpath: //b[contains(.,'Account Deleted!')]".
+[INFO ] 2023-04-29 15:21:38.344 [main] ReportManager - Expected "null", and actual "null"
+[INFO ] 2023-04-29 15:21:40.061 [main] ReportManager - Assertion "ValidateElementAttribute" PASSED. Expected "Value Should be 'null' for the 'hidden' attribute, element locator 'By.xpath: //b[contains(.,'Account Deleted!')]'" and Actual "null". Comparison Type "EQUALS". Validation Type "POSITIVE".
+[INFO ] 2023-04-29 15:21:40.064 [main] ReportManager - Successfully created attachment 'Screenshot - 1682774498608_RegisterUser_ValidateElementAttribute_passed'
+[INFO ] 2023-04-29 15:21:40.296 [main] ReportManager - Click "Continue".
+[INFO ] 2023-04-29 15:21:40.321 [main] ReportManager - Successfully created attachment 'SHAFT Engine Logs - Current Method log: RegisterUser'
+[INFO ] 2023-04-29 15:21:40.656 [main] ReportManager - 
+------------------------------------------------------------------------------------------------------------------------------------------------
+                                            Starting execution of suite teardown configuration method                                            
+                                        'com.shaft.listeners.internal.ConfigurationHelper.suiteTeardown'                                        
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+[INFO ] 2023-04-29 15:21:40.658 [main] ReportManager - Successfully created attachment 'SHAFT Engine Logs - Execution log'
+[INFO ] 2023-04-29 15:21:40.659 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "target/logs/log4j.log"".
+[INFO ] 2023-04-29 15:21:40.660 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "target/logs/log4j.log"".

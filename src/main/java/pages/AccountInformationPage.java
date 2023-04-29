@@ -63,10 +63,10 @@ public class AccountInformationPage {
         driver.element().type(mobileNumberInput, mobileNumber);
     }
 
-    public AccountCreatedPage clickCreateAccountButton() {
+    public AccountPage clickCreateAccountButton() {
 
         driver.element().click(createAccountButton);
-        return new AccountCreatedPage(driver);
+        return new AccountPage(driver);
     }
 
 

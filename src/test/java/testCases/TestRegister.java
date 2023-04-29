@@ -1,11 +1,12 @@
-package TestCases;
+package testCases;
 
 import base.BaseTest;
 import com.shaft.tools.io.JSONFileManager;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.AccountCreatedPage;
+import pages.AccountPage;
 import pages.AccountInformationPage;
+import pages.HomePage;
 import pages.SignUpAndLogInPage;
 
 import java.util.Date;
@@ -64,9 +65,19 @@ public class TestRegister extends BaseTest {
                 jsonFileManager.getTestData("mobileNumber")
         );
 
-        AccountCreatedPage accountCreatedPage = accountInformationPage.clickCreateAccountButton();
+        AccountPage accountPage = accountInformationPage.clickCreateAccountButton();
 
-//        accountCreatedPage.VerifyThatACCOUNTCREATEDIsVisible();
+        accountPage.VerifyThatACCOUNTCREATEDIsVisible();
+
+        HomePage homePage1 = accountPage.clickContinueButton();
+
+        homePage1.verifyThatLoggedInAsIsVisible();
+
+        AccountPage accountPage1 = homePage1.clickDeleteAccountButton();
+
+        accountPage1.verifyThatACCOUNTDELETEDIsVisible();
+
+        accountPage1.clickContinueButton();
 
     }
 

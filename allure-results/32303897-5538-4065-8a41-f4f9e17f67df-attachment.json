@@ -1,0 +1,18 @@
+{
+  "email": "test",
+  "name": "Name",
+  "password": "12345678",
+  "day": "12",
+  "month": "October",
+  "year": "1998",
+  "firstName": "Mohamed",
+  "lastName": "Belal",
+  "company": "company",
+  "address1": "address1",
+  "address2": "address2",
+  "country": "United States",
+  "state": "state",
+  "city": "city",
+  "zipcode": "zipcode",
+  "mobileNumber": "mobileNumber"
+}

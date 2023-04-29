@@ -9,6 +9,8 @@ public class HomePage {
 
     private final By logoLocator = By.xpath("//img[@alt='Website for automation practice']");
     private final By signUpAndLoginLocator = By.xpath("//a[contains(. , ' Signup / Login')]");
+    private final By loggedInAsLocator = By.xpath("//a[contains( . , ' Logged in as ')]");
+    private final By deleteAccountButton = By.xpath("//a[contains( . , ' Delete Account')]");
 
     public HomePage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
@@ -25,6 +27,18 @@ public class HomePage {
 
         driver.element().click(signUpAndLoginLocator);
         return new SignUpAndLogInPage(driver);
+    }
+
+    public void verifyThatLoggedInAsIsVisible() {
+
+        driver.assertThat().element(loggedInAsLocator).isVisible().
+                withCustomReportMessage(" Verify that 'Logged in as username' is visible").perform();
+    }
+
+    public AccountPage clickDeleteAccountButton() {
+
+        driver.element().click(deleteAccountButton);
+        return new AccountPage(driver);
     }
 
 }
