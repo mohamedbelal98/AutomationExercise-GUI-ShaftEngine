@@ -30,11 +30,11 @@ public class TestRegister extends BaseTest {
 
         String email = jsonFileManager.getTestData("email") + current_time.substring(6) + "@test.com";
 
-        homePage.VerifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
         SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
 
-        signUpAndLogInPage.verifySignUpAndLogInTextIsVisible();
+        signUpAndLogInPage.verifyNewUserSignupIsVisible();
 
         signUpAndLogInPage.newUserSignUp(
                 jsonFileManager.getTestData("name"),
@@ -43,7 +43,7 @@ public class TestRegister extends BaseTest {
 
         AccountInformationPage accountInformationPage = signUpAndLogInPage.clickSignUpButton();
 
-        accountInformationPage.VerifyThatENTERACCOUNTINFORMATIONIsVisible();
+        accountInformationPage.verifyThatENTERACCOUNTINFORMATIONIsVisible();
 
         accountInformationPage.fillAccountInformation(
                 jsonFileManager.getTestData("password"),
@@ -67,7 +67,7 @@ public class TestRegister extends BaseTest {
 
         AccountPage accountPage = accountInformationPage.clickCreateAccountButton();
 
-        accountPage.VerifyThatACCOUNTCREATEDIsVisible();
+        accountPage.verifyThatAccountCreatedIsVisible();
 
         HomePage homePage1 = accountPage.clickContinueButton();
 
@@ -75,10 +75,29 @@ public class TestRegister extends BaseTest {
 
         AccountPage accountPage1 = homePage1.clickDeleteAccountButton();
 
-        accountPage1.verifyThatACCOUNTDELETEDIsVisible();
+        accountPage1.verifyThatAccountDeletedIsVisible();
 
         accountPage1.clickContinueButton();
 
+    }
+
+    @Test
+    public void RegisterUserWithExistingEmail() {
+
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
+
+        SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
+
+        signUpAndLogInPage.verifyNewUserSignupIsVisible();
+
+        signUpAndLogInPage.newUserSignUp(
+                jsonFileManager.getTestData("name"),
+                jsonFileManager.getTestData("emailAlreadyExist")
+        );
+
+        signUpAndLogInPage.clickSignUpButton();
+
+        signUpAndLogInPage.verifyErrorEmailAddressAlreadyExistIsVisible();
     }
 
 }

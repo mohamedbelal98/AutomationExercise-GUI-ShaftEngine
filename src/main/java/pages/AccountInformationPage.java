@@ -25,13 +25,13 @@ public class AccountInformationPage {
     private final By cityInput = By.id("city");
     private final By zipcodeInput = By.id("zipcode");
     private final By mobileNumberInput = By.id("mobile_number");
-    private final By createAccountButton = By.xpath("//button[@data-qa='create-account']");
+    private final By createAccountButton = By.xpath("//button[contains(.,'Create Account')]");
 
     public AccountInformationPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
 
-    public void VerifyThatENTERACCOUNTINFORMATIONIsVisible() {
+    public void verifyThatENTERACCOUNTINFORMATIONIsVisible() {
 
         driver.assertThat().element(pageTitle).isVisible().
                 withCustomReportMessage("Verify that 'ENTER ACCOUNT INFORMATION' is visible").perform();
@@ -48,8 +48,8 @@ public class AccountInformationPage {
         driver.element().click(specialOffersLocator);
     }
 
-    public void fillAddressInformation(String firstName, String lastName, String company, String address1, String address2, String country,
-                                       String state, String city, String zipcode, String mobileNumber) {
+    public AccountInformationPage fillAddressInformation(String firstName, String lastName, String company, String address1, String address2, String country,
+                                                         String state, String city, String zipcode, String mobileNumber) {
 
         driver.element().type(firstNameInput, firstName);
         driver.element().type(lastNameInput, lastName);
@@ -61,6 +61,7 @@ public class AccountInformationPage {
         driver.element().type(cityInput, city);
         driver.element().type(zipcodeInput, zipcode);
         driver.element().type(mobileNumberInput, mobileNumber);
+        return this;
     }
 
     public AccountPage clickCreateAccountButton() {
@@ -68,6 +69,5 @@ public class AccountInformationPage {
         driver.element().click(createAccountButton);
         return new AccountPage(driver);
     }
-
 
 }

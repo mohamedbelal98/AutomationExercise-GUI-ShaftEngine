@@ -20,7 +20,7 @@ public class TestLogout extends BaseTest {
     @Test
     public void logOutUser() {
 
-        homePage.VerifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
         SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
 
@@ -37,7 +37,7 @@ public class TestLogout extends BaseTest {
 
         SignUpAndLogInPage signUpAndLogInPage1 = homePage1.clickLogoutButton();
 
-        signUpAndLogInPage1.verifySignUpAndLogInTextIsVisible();
+        signUpAndLogInPage1.verifyNewUserSignupIsVisible();
     }
 
 }

@@ -12,13 +12,14 @@ public class HomePage {
     private final By loggedInAsLocator = By.xpath("//a[contains( . , ' Logged in as ')]");
     private final By deleteAccountButton = By.xpath("//a[contains( . , ' Delete Account')]");
     private final By logoutButton = By.xpath("//a[contains( . , ' Logout')]");
+    private final By contactUsButton = By.xpath("//a[contains( . , ' Contact us')]");
 
     public HomePage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
 
 
-    public void VerifyThatHomePageIsVisibleSuccessfully() {
+    public void verifyThatHomePageIsVisibleSuccessfully() {
 
         driver.assertThat().element(logoLocator).isVisible().
                 withCustomReportMessage("Verify that home page is visible successfully").perform();
@@ -46,6 +47,12 @@ public class HomePage {
 
         driver.element().click(logoutButton);
         return new SignUpAndLogInPage(driver);
+    }
+
+    public ContactUsPage clickContactUsButton() {
+
+        driver.element().click(contactUsButton);
+        return new ContactUsPage(driver);
     }
 
 }

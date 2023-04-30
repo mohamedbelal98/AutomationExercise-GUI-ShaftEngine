@@ -21,7 +21,7 @@ public class TestLogin extends BaseTest {
     @Test
     public void LoginUserWithCorrectEmailAndPassword() {
 
-        homePage.VerifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
         SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
 
@@ -42,7 +42,7 @@ public class TestLogin extends BaseTest {
     @Test
     public void LoginUserWithIncorrectEmailAndPassword() {
 
-        homePage.VerifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
         SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
 

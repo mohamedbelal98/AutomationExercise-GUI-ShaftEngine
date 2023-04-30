@@ -1,6 +1,7 @@
 package pages;
 
 import com.shaft.driver.SHAFT;
+import com.shaft.validation.Validations;
 import org.openqa.selenium.By;
 
 public class SignUpAndLogInPage {
@@ -15,16 +16,18 @@ public class SignUpAndLogInPage {
     private final By loginEmailAddressInput = By.xpath("//input[@data-qa='login-email']");
     private final By loginPasswordInput = By.xpath("//input[@data-qa='login-password']");
     private final By loginButton = By.xpath("//button[@data-qa='login-button']");
-    private final By errorMessageForLogin = By.xpath("//p[@style='color: red;']");
+    private final By errorMessage = By.xpath("//p[@style='color: red;']");
 
     public SignUpAndLogInPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
 
-    public void verifySignUpAndLogInTextIsVisible() {
+    public void verifyNewUserSignupIsVisible() {
 
         driver.assertThat().element(signUpAndLogInText).isVisible().
                 withCustomReportMessage("Verify 'New User Signup!' is visible").perform();
+
+        Validations.assertThat().element(signUpAndLogInText).text().isEqualTo("New User Signup!").perform();
     }
 
     public void newUserSignUp(String name, String email) {
@@ -43,6 +46,8 @@ public class SignUpAndLogInPage {
 
         driver.assertThat().element(LoginToYourAccountText).isVisible().
                 withCustomReportMessage("Verify 'New User Signup!' is visible").perform();
+
+        Validations.assertThat().element(LoginToYourAccountText).text().isEqualTo("Login to your account").perform();
     }
 
     public void loginToYourAccount(String email, String password) {
@@ -57,10 +62,20 @@ public class SignUpAndLogInPage {
         return new HomePage(driver);
     }
 
-    public void verifyErrorYourEmailOrPasswordIsIncorrectIsVisible(){
+    public void verifyErrorYourEmailOrPasswordIsIncorrectIsVisible() {
 
-        driver.assertThat().element(errorMessageForLogin).isVisible().
+        driver.assertThat().element(errorMessage).isVisible().
                 withCustomReportMessage("Verify error 'Your email or password is incorrect!' is visible").perform();
+
+        Validations.assertThat().element(errorMessage).text().isEqualTo("Your email or password is incorrect!").perform();
+    }
+
+    public void verifyErrorEmailAddressAlreadyExistIsVisible() {
+
+        driver.assertThat().element(errorMessage).isVisible().
+                withCustomReportMessage("Verify error 'Your email or password is incorrect!' is visible").perform();
+
+        Validations.assertThat().element(errorMessage).text().isEqualTo("Email Address already exist!").perform();
     }
 
 }
