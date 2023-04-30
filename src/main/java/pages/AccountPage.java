@@ -7,7 +7,7 @@ public class AccountPage {
 
     SHAFT.GUI.WebDriver driver;
 
-    private final By accountCreatedLocator = By.xpath("//b[contains(.,'Account Created')]");
+    private final By accountCreatedLocator = By.xpath("//h2[@data-qa='account-created']");
     private final By continueButton = By.linkText("Continue");
     private final By accountDeletedLocator = By.xpath("//b[contains(.,'Account Deleted!')]");
 

@@ -42,9 +42,10 @@ public class HomePage {
         return new AccountPage(driver);
     }
 
-    public void clickLogoutButton() {
+    public SignUpAndLogInPage clickLogoutButton() {
 
         driver.element().click(logoutButton);
+        return new SignUpAndLogInPage(driver);
     }
 
 }
