@@ -38,7 +38,7 @@
   </parameter>
   <parameter>
     <key>sun.java.command</key>
-    <value>com.intellij.rt.testng.RemoteTestNGStarter -usedefaultlisteners false -listener com.shaft.listeners.TestNGListener -socket61281 @w@/private/var/folders/rw/71w5dnwx2wv0z91fd1fjyjfc0000gn/T/idea_working_dirs_testng.tmp -temp /private/var/folders/rw/71w5dnwx2wv0z91fd1fjyjfc0000gn/T/idea_testng.tmp</value>
+    <value>com.intellij.rt.testng.RemoteTestNGStarter -usedefaultlisteners false -listener com.shaft.listeners.TestNGListener -socket54478 @w@/private/var/folders/rw/71w5dnwx2wv0z91fd1fjyjfc0000gn/T/idea_working_dirs_testng.tmp -temp /private/var/folders/rw/71w5dnwx2wv0z91fd1fjyjfc0000gn/T/idea_testng.tmp</value>
   </parameter>
   <parameter>
     <key>jdk.debug</key>

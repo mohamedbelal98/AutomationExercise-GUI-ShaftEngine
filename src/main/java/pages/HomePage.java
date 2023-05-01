@@ -13,6 +13,8 @@ public class HomePage {
     private final By deleteAccountButton = By.xpath("//a[contains( . , ' Delete Account')]");
     private final By logoutButton = By.xpath("//a[contains( . , ' Logout')]");
     private final By contactUsButton = By.xpath("//a[contains( . , ' Contact us')]");
+    private final By testCasesButton = By.xpath("//a[contains( . , ' Test Cases')]");
+    private final By productsButton = By.xpath("//a[contains( . , ' Products')]");
 
     public HomePage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
@@ -53,6 +55,18 @@ public class HomePage {
 
         driver.element().click(contactUsButton);
         return new ContactUsPage(driver);
+    }
+
+    public TestCasesPage clickTestCasesButton() {
+
+        driver.element().click(testCasesButton);
+        return new TestCasesPage(driver);
+    }
+
+    public ProductsPage clickProductsButton() {
+
+        driver.element().click(productsButton);
+        return new ProductsPage(driver);
     }
 
 }
