@@ -12,6 +12,8 @@ public class ProductsPage {
     private final By saleImageLocator = By.id("sale_image");
     private final By allProductsList = By.className("product-image-wrapper");
     private final By viewProductsForFirstItem = By.xpath("/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[2]/ul/li/a");
+    private final By searchInput = By.id("search_product");
+    private final By searchButton = By.id("submit_search");
 
     public ProductsPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
@@ -37,6 +39,16 @@ public class ProductsPage {
 
         driver.element().click(viewProductsForFirstItem);
         return new SingleProductPage(driver);
+    }
+
+    public void enterSearchInput(String searchWord) {
+
+        driver.element().type(searchInput, searchWord);
+    }
+
+    public void clickSearchButton() {
+
+        driver.element().click(searchButton);
     }
 
 }
