@@ -17,7 +17,7 @@ public class TestSearch extends BaseTest {
     }
 
     @Test
-    public void SearchProduct() {
+    public void SearchProduct() throws InterruptedException {
 
         homePage.verifyThatHomePageIsVisibleSuccessfully();
 
@@ -30,6 +30,10 @@ public class TestSearch extends BaseTest {
         productsPage.enterSearchInput(jsonFileManager.getTestData("searchWord"));
 
         productsPage.clickSearchButton();
+
+        Thread.sleep(4000);
+
+        productsPage.verifyAllTheProductsRelatedToSearchAreVisible();
     }
 
 }
