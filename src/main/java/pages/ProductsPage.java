@@ -3,11 +3,8 @@ package pages;
 import com.shaft.driver.SHAFT;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import java.time.Duration;
 import java.util.List;
 
 public class ProductsPage {
@@ -73,7 +70,7 @@ public class ProductsPage {
 
             if (!element.getText().contains("Top")) {
 
-                Assert.fail(element.getText() + "Not contain Top word as Expected");
+                Assert.fail(element.getText() + "Not contain Search word (TOP) as Expected");
             }
         }
 
