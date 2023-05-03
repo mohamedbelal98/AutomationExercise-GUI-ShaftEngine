@@ -4,11 +4,12 @@ import base.BaseTest;
 import com.shaft.tools.io.JSONFileManager;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.CartPage;
+import pages.Footer;
 
 public class TestSubscription extends BaseTest {
 
     JSONFileManager jsonFileManager;
+    Footer footer;
 
     @BeforeClass
     public void beforeClass() {
@@ -17,35 +18,39 @@ public class TestSubscription extends BaseTest {
     }
 
     @Test
-    public void verifySubscriptionInHomePage(){
+    public void verifySubscriptionInHomePage() {
+
+        footer = new Footer(super.driver);
 
         homePage.verifyThatHomePageIsVisibleSuccessfully();
 
-        homePage.scrollToFooter();
+        footer.scrollToFooter();
 
-        homePage.verifySubscribeText();
+        footer.verifySubscribeText();
 
-        homePage.fillEmailAddressInput("email");
+        footer.fillEmailAddressInput(jsonFileManager.getTestData("email"));
 
-        homePage.VerifySuccessMessageForSubscribeIsVisible();
+        footer.verifySuccessMessageForSubscribeIsVisible();
     }
 
     @Test
     public void verifySubscriptionInCartPage() {
 
-        homePage.verifyThatHomePageIsVisibleSuccessfully();
+        footer = new Footer(super.driver);
 
         homePage.verifyThatHomePageIsVisibleSuccessfully();
 
-        CartPage cartPage = homePage.clickCartButton();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
-        cartPage.scrollToFooter();
+        homePage.clickCartButton();
 
-        cartPage.verifySubscribeText();
+        footer.scrollToFooter();
 
-        cartPage.fillEmailAddressInput("email");
+        footer.verifySubscribeText();
 
-        cartPage.VerifySuccessMessageForSubscribeIsVisible();
+        footer.fillEmailAddressInput(jsonFileManager.getTestData("email"));
+
+        footer.verifySuccessMessageForSubscribeIsVisible();
     }
 
 }

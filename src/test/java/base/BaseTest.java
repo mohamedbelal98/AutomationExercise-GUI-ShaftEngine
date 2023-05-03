@@ -6,7 +6,7 @@ import pages.HomePage;
 
 public class BaseTest {
 
-    SHAFT.GUI.WebDriver driver;
+    public SHAFT.GUI.WebDriver driver;
     protected HomePage homePage;
 
     private static final String BASE_URL = "https://automationexercise.com/";
