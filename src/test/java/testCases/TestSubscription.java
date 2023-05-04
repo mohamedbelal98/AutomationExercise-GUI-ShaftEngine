@@ -4,7 +4,7 @@ import base.BaseTest;
 import com.shaft.tools.io.JSONFileManager;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.Footer;
+import pages.comman.Footer;
 
 public class TestSubscription extends BaseTest {
 

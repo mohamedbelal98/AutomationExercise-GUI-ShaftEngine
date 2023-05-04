@@ -1,4 +1,4 @@
-package pages;
+package pages.comman;
 
 import com.shaft.driver.SHAFT;
 import com.shaft.validation.Validations;

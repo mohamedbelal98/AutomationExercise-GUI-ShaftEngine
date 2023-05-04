@@ -16,15 +16,40 @@ public class ProductsPage {
     private final By searchInput = By.id("search_product");
     private final By searchButton = By.id("submit_search");
     private final By productNameList = By.xpath("//div[@class='productinfo text-center']/p");
+    private final By firstProductItem = By.xpath("/html/body/section[2]/div/div/div[2]/div[1]/div[2]/div/div[1]/div[1]");
+    private final By addToCartForFirstProductItem = By.xpath("/html/body/section[2]/div/div/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/a");
+    private final By secondProductItem = By.xpath("/html/body/section[2]/div/div/div[2]/div[1]/div[3]/div/div[1]/div[1]");
+    private final By addToCartForSecondProductItem = By.xpath("/html/body/section[2]/div/div/div[2]/div[1]/div[3]/div/div[1]/div[2]/div/a");
+    private final By continueButton = By.xpath("//button[@class='btn btn-success close-modal btn-block']");
+    private final By viewCartButton = By.xpath("//div[@class='modal-body']/p/a");
+    private final By firstItemPriceText = By.xpath("//div[@class='features_items']/div[2]/div/div/div/h2");
+    private final By secondItemPriceText = By.xpath("//div[@class='features_items']/div[3]/div/div/div/h2");
 
     public ProductsPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
 
-    public void saleImageIsVisible() {
+    public void verifyAllTheProductsRelatedToSearchAreVisible() {
 
-        driver.assertThat().element(saleImageLocator).isVisible().
-                withCustomReportMessage("Verify user is navigated to ALL PRODUCTS page successfully").perform();
+        List<WebElement> listOfProducts = driver.getDriver().findElements(allProductsList);
+
+        System.out.println(listOfProducts.size()); //TODO delete this
+
+        for (WebElement element : listOfProducts) {
+
+            element.isDisplayed();
+        }
+
+        List<WebElement> list = driver.getDriver().findElements(productNameList);
+
+        for (WebElement element : list) {
+
+            if (!element.getText().contains("Top")) {
+
+                Assert.fail(element.getText() + "Not contain Search word (TOP) as Expected");
+            }
+        }
+
     }
 
     public void productsListIsVisible() {
@@ -35,6 +60,12 @@ public class ProductsPage {
 
             element.isDisplayed();
         }
+    }
+
+    public void saleImageIsVisible() {
+
+        driver.assertThat().element(saleImageLocator).isVisible().
+                withCustomReportMessage("Verify user is navigated to ALL PRODUCTS page successfully").perform();
     }
 
     public SingleProductPage clickOnViewProductsForFirstProduct() {
@@ -53,27 +84,37 @@ public class ProductsPage {
         driver.element().click(searchButton);
     }
 
-    public void verifyAllTheProductsRelatedToSearchAreVisible() {
+    public void hoverAndClickInFirstProduct() {
 
-        List<WebElement> listOfProducts = driver.getDriver().findElements(allProductsList);
+        driver.element().hover(firstProductItem);
+        driver.element().click(addToCartForFirstProductItem);
+    }
 
-        System.out.println(listOfProducts.size());//TODO delete this
+    public void hoverAndClickInSecondProduct() {
 
-        for (WebElement element : listOfProducts) {
+        driver.element().hover(secondProductItem);
+        driver.element().click(addToCartForSecondProductItem);
+    }
 
-            element.isDisplayed();
-        }
+    public void clickOnContinueButton() {
 
-        List<WebElement> list = driver.getDriver().findElements(productNameList);
+        driver.element().click(continueButton);
+    }
 
-        for (WebElement element : list) {
+    public CartPage clickViewCartButton() {
 
-            if (!element.getText().contains("Top")) {
+        driver.element().click(viewCartButton);
+        return new CartPage(driver);
+    }
 
-                Assert.fail(element.getText() + "Not contain Search word (TOP) as Expected");
-            }
-        }
+    public String verifyFirstItemPrice() {
 
+        return driver.element().getText(firstItemPriceText);
+    }
+
+    public String verifySecondItemPrice() {
+
+        return driver.element().getText(secondItemPriceText);
     }
 
 }
