@@ -7,6 +7,7 @@ public class AccountInformationPage {
 
     SHAFT.GUI.WebDriver driver;
 
+    //Locators
     private final By pageTitle = By.xpath("(//h2[@class='title text-center']/child::b)[1]");
     private final By mrTitleInput = By.xpath("//input[@id='id_gender1']");
     private final By passwordInput = By.xpath("//input[@data-qa='password']");
@@ -27,6 +28,7 @@ public class AccountInformationPage {
     private final By mobileNumberInput = By.id("mobile_number");
     private final By createAccountButton = By.xpath("//button[contains(.,'Create Account')]");
 
+    //Constructor
     public AccountInformationPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
@@ -37,6 +39,12 @@ public class AccountInformationPage {
                 withCustomReportMessage("Verify that 'ENTER ACCOUNT INFORMATION' is visible").perform();
     }
 
+    /**
+     * @param password
+     * @param day
+     * @param month
+     * @param year
+     */
     public void fillAccountInformation(String password, String day, String month, String year) {
 
         driver.element().click(mrTitleInput);
@@ -48,6 +56,19 @@ public class AccountInformationPage {
         driver.element().click(specialOffersLocator);
     }
 
+    /**
+     * @param firstName
+     * @param lastName
+     * @param company
+     * @param address1
+     * @param address2
+     * @param country
+     * @param state
+     * @param city
+     * @param zipcode
+     * @param mobileNumber
+     * @return AccountInformationPage
+     */
     public AccountInformationPage fillAddressInformation(String firstName, String lastName, String company, String address1, String address2, String country,
                                                          String state, String city, String zipcode, String mobileNumber) {
 
@@ -64,6 +85,7 @@ public class AccountInformationPage {
         return this;
     }
 
+    //Click Create account button
     public AccountPage clickCreateAccountButton() {
 
         driver.element().click(createAccountButton);

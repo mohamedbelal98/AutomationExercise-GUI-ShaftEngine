@@ -10,6 +10,8 @@ import java.util.List;
 public class ProductsPage {
 
     SHAFT.GUI.WebDriver driver;
+
+    //Locators
     private final By saleImageLocator = By.id("sale_image");
     private final By allProductsList = By.className("product-image-wrapper");
     private final By viewProductsForFirstItem = By.xpath("/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[2]/ul/li/a");
@@ -25,10 +27,15 @@ public class ProductsPage {
     private final By firstItemPriceText = By.xpath("//div[@class='features_items']/div[2]/div/div/div/h2");
     private final By secondItemPriceText = By.xpath("//div[@class='features_items']/div[3]/div/div/div/h2");
 
+    //Constructor
     public ProductsPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
 
+    /*
+     * Verify all list of search product are loaded successfully in products page
+     * Verify all product are related to search(Contain search word in product name)
+     */
     public void verifyAllTheProductsRelatedToSearchAreVisible() {
 
         List<WebElement> listOfProducts = driver.getDriver().findElements(allProductsList);
@@ -52,6 +59,7 @@ public class ProductsPage {
 
     }
 
+    //Verify all products is visible and loaded
     public void productsListIsVisible() {
 
         List<WebElement> listOfProducts = driver.getDriver().findElements(allProductsList);
@@ -62,12 +70,18 @@ public class ProductsPage {
         }
     }
 
+    //Verify product page is loaded successfully
     public void saleImageIsVisible() {
 
         driver.assertThat().element(saleImageLocator).isVisible().
                 withCustomReportMessage("Verify user is navigated to ALL PRODUCTS page successfully").perform();
     }
 
+    /**
+     * click in view product in first product item in product page
+     *
+     * @return SingleProductPage
+     */
     public SingleProductPage clickOnViewProductsForFirstProduct() {
 
         driver.element().click(viewProductsForFirstItem);
@@ -101,17 +115,28 @@ public class ProductsPage {
         driver.element().click(continueButton);
     }
 
+    /**
+     * click in cart button
+     *
+     * @return CartPage
+     */
     public CartPage clickViewCartButton() {
 
         driver.element().click(viewCartButton);
         return new CartPage(driver);
     }
 
+    /**
+     * @return firstItemPriceText
+     */
     public String verifyFirstItemPrice() {
 
         return driver.element().getText(firstItemPriceText);
     }
 
+    /**
+     * @return secondItemPriceText
+     */
     public String verifySecondItemPrice() {
 
         return driver.element().getText(secondItemPriceText);

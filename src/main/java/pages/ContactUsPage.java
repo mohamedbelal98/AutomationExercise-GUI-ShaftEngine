@@ -8,6 +8,7 @@ public class ContactUsPage {
 
     SHAFT.GUI.WebDriver driver;
 
+    //Locators
     private final By getInTouchTextLocator = By.xpath("//h2[contains( . , 'Get In Touch')]");
     private final By nameInput = By.name("name");
     private final By emailInput = By.name("email");
@@ -18,9 +19,11 @@ public class ContactUsPage {
     private final By successMessage = By.xpath("//div[@class='status alert alert-success']");
     private final By homeButton = By.xpath("//*[@class='btn btn-success']");
 
+    //Constructor
     public ContactUsPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
+
 
     public void verifyGetInTouchIsVisible() {
 
@@ -30,6 +33,14 @@ public class ContactUsPage {
         Validations.assertThat().element(getInTouchTextLocator).text().isEqualTo("GET IN TOUCH").perform();
     }
 
+    /**
+     *
+     * @param name
+     * @param email
+     * @param subject
+     * @param message
+     * @param filePath
+     */
     public void fillNameEmailSubjectAndMessage(String name, String email, String subject, String message, String filePath) {
 
         driver.element().type(nameInput, name);
@@ -49,6 +60,7 @@ public class ContactUsPage {
         driver.alert().acceptAlert();
     }
 
+    // Verify success message 'Success! Your details have been submitted successfully.' is visible
     public void VerifySuccessMessageSuccessYourDetailsHaveBeenSubmittedSuccessfullyIsVisible() {
 
         driver.assertThat().element(successMessage).isVisible().
@@ -57,6 +69,11 @@ public class ContactUsPage {
         Validations.assertThat().element(successMessage).text().isEqualTo("Success! Your details have been submitted successfully.").perform();
     }
 
+    /**
+     * click in home page button
+     *
+     * @return HomePage
+     */
     public HomePage clickHomeButton() {
 
         driver.element().click(homeButton);

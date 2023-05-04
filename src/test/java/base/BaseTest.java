@@ -1,6 +1,7 @@
 package base;
 
 import com.shaft.driver.SHAFT;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import pages.HomePage;
 
@@ -21,10 +22,10 @@ public class BaseTest {
         homePage = new HomePage(driver);
     }
 
-//    @AfterClass
-//    public void tearDown() {
-//
-//        driver.quit();
-//    }
+    @AfterClass
+    public void tearDown() {
+
+        driver.quit();
+    }
 
 }

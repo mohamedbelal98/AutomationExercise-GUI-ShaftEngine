@@ -7,6 +7,7 @@ public class SingleProductPage {
 
     SHAFT.GUI.WebDriver driver;
 
+    //Locators
     private final By productNameLocator = By.xpath("//div[@class='product-information']/child::h2");
     private final By categoryLocator = By.xpath("//div[@class='product-information']/child::p[1]");
     private final By priceLocator = By.xpath("//div[@class='product-information']/span/span");
@@ -14,10 +15,14 @@ public class SingleProductPage {
     private final By conditionLocator = By.xpath("//div[@class='product-information']/child::p[3]");
     private final By brandLocator = By.xpath("//div[@class='product-information']/child::p[4]");
 
+    //Constructor
     public SingleProductPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
 
+    /*
+     * Verify that product detail is visible: product name, category, price, availability, condition, brand
+     */
     public void verifyProductDetailsIsVisible() {
 
         driver.assertThat().element(productNameLocator).isVisible().

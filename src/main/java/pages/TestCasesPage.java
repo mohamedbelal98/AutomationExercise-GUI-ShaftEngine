@@ -8,12 +8,15 @@ public class TestCasesPage {
 
     SHAFT.GUI.WebDriver driver;
 
+    //Locator
     private final By testCasesText = By.xpath("//span[@style='color: red;']");
 
+    //Constructor
     public TestCasesPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
 
+    //Verify user is navigated to test cases page successfully
     public void VerifyUserIsNavigatedToTestCasesPageSuccessfully() {
 
         driver.assertThat().element(testCasesText).isVisible().

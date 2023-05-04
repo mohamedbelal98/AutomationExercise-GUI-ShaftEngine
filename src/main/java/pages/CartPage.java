@@ -25,6 +25,7 @@ public class CartPage {
 
     /**
      * Verify the number of item in the cart and check the size of the list of product is he same I entered or not.
+     *
      * @param numberOfItem
      */
     public void verifyNumberOfItemInCart(int numberOfItem) {
@@ -42,7 +43,6 @@ public class CartPage {
     }
 
     /**
-     *
      * @return firstItemPriceText
      */
     public String verifyFirstItemPrice() {
@@ -51,7 +51,6 @@ public class CartPage {
     }
 
     /**
-     *
      * @return secondItemPriceText
      */
     public String verifySecondItemPrice() {
@@ -61,6 +60,7 @@ public class CartPage {
 
     /**
      * Verify Quantity Number in the cart page is correct or not
+     *
      * @param element
      * @param quantityNumber
      */
