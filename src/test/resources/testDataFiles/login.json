@@ -2,5 +2,6 @@
   "email": "mohamedbelal1998@gmail.com",
   "password": "123456789",
   "incorrectEmail": "test@test.com",
-  "incorrectPassword": "1234512345"
+  "incorrectPassword": "1234512345",
+  "name": "Logged in as Mohamed samier belal"
 }

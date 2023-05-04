@@ -4,20 +4,17 @@ import base.BaseTest;
 import com.shaft.tools.io.JSONFileManager;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.AccountPage;
-import pages.AccountInformationPage;
-import pages.HomePage;
-import pages.SignUpAndLogInPage;
+import pages.*;
+import pages.comman.AddToCart;
 
 import java.util.Date;
 
-
-public class TestRegister extends BaseTest {
+public class TestPlaceOrder extends BaseTest {
 
     JSONFileManager jsonFileManager;
     Date date = new Date();
     String current_time = date.getTime() + "";
-
+    AddToCart addToCart;
 
     @BeforeClass
     public void beforeClass() {
@@ -26,13 +23,25 @@ public class TestRegister extends BaseTest {
     }
 
     @Test
-    public void RegisterUser() throws InterruptedException {
+    public void RegisterWhileCheckout() throws InterruptedException {
 
         String email = jsonFileManager.getTestData("email") + current_time.substring(6) + "@test.com";
 
+        addToCart = new AddToCart(super.driver);
+
         homePage.verifyThatHomePageIsVisibleSuccessfully();
 
-        SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
+        addToCart.hoverAndClickInFirstProduct();
+
+        addToCart.clickOnContinueButton();
+
+        addToCart.hoverAndClickInSecondProduct();
+
+        CartPage cartPage = addToCart.clickViewCartButton();
+
+        cartPage.clickProceedToCheckOut();
+
+        SignUpAndLogInPage signUpAndLogInPage = cartPage.clickRegisterLoginButton();
 
         signUpAndLogInPage.verifyNewUserSignupIsVisible();
 
@@ -65,7 +74,7 @@ public class TestRegister extends BaseTest {
                 jsonFileManager.getTestData("mobileNumber")
         );
 
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         AccountPage accountPage = accountInformationPage.clickCreateAccountButton();
 
@@ -75,31 +84,15 @@ public class TestRegister extends BaseTest {
 
         homePage1.verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("loginName"));
 
-        AccountPage accountPage1 = homePage1.clickDeleteAccountButton();
+        CartPage cartPage1 = homePage1.clickCartButton();
 
-        accountPage1.verifyThatAccountDeletedIsVisible();
+        CheckOutPage checkOutPage = cartPage1.clickProceedToCheckOut();
 
-        accountPage1.clickContinueButton();
+        checkOutPage.verifyAddressDetailsAndReviewYourOrder();
 
-    }
+        checkOutPage.fillDescription("Random Description");
 
-    @Test
-    public void RegisterUserWithExistingEmail() {
-
-        homePage.verifyThatHomePageIsVisibleSuccessfully();
-
-        SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
-
-        signUpAndLogInPage.verifyNewUserSignupIsVisible();
-
-        signUpAndLogInPage.newUserSignUp(
-                jsonFileManager.getTestData("name"),
-                jsonFileManager.getTestData("emailAlreadyExist")
-        );
-
-        signUpAndLogInPage.clickSignUpButton();
-
-        signUpAndLogInPage.verifyErrorEmailAddressAlreadyExistIsVisible();
+        checkOutPage.clickPlaceOrderButton();
     }
 
 }

@@ -15,5 +15,6 @@
   "city": "city",
   "zipcode": "zipcode",
   "mobileNumber": "mobileNumber",
-  "emailAlreadyExist": "mohamedbelal1998@gmail.com"
+  "emailAlreadyExist": "mohamedbelal1998@gmail.com",
+  "loginName": "Logged in as Name"
 }

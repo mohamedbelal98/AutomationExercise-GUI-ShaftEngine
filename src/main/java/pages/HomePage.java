@@ -1,6 +1,7 @@
 package pages;
 
 import com.shaft.driver.SHAFT;
+import com.shaft.validation.Validations;
 import org.openqa.selenium.By;
 
 public class HomePage {
@@ -41,11 +42,17 @@ public class HomePage {
         return new SignUpAndLogInPage(driver);
     }
 
-    //Verify that 'Logged in as username' is visible
-    public void verifyThatLoggedInAsIsVisible() {
+    /**
+     * Verify that 'Logged in as username' is visible
+     *
+     * @param name
+     */
+    public void verifyThatLoggedInAsIsVisible(String name) {
 
         driver.assertThat().element(loggedInAsLocator).isVisible().
                 withCustomReportMessage(" Verify that 'Logged in as username' is visible").perform();
+
+        driver.assertThat().element(loggedInAsLocator).text().isEqualTo(name).perform();
     }
 
     /**

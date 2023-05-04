@@ -34,7 +34,7 @@ public class TestLogin extends BaseTest {
 
         HomePage homePage1 = signUpAndLogInPage.clickLoginButton();
 
-        homePage1.verifyThatLoggedInAsIsVisible();
+        homePage1.verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("name"));
 
         homePage1.clickLogoutButton();
     }

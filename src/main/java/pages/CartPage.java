@@ -17,6 +17,8 @@ public class CartPage {
     private final By secondItemPriceText = By.xpath("//div[@id='cart_info']/table/tbody/tr[2]/td[3]/p");
     public final By firstItemQuantity = By.xpath("//tr[@id='product-1']/td[4]/button");
     public final By secondItemQuantity = By.xpath("//tr[@id='product-2']/td[4]/button");
+    private final By proceedToCheckout = By.xpath("//a[contains(. , 'Proceed To Checkout')]");
+    private final By registerLoginButton = By.xpath("//div[@class='modal-body']/p[2]/a");
 
     //Constructor
     public CartPage(SHAFT.GUI.WebDriver driver) {
@@ -72,6 +74,23 @@ public class CartPage {
 
             Assert.fail("Quantity Number is not correct");
         }
+    }
+
+    public CheckOutPage clickProceedToCheckOut() {
+
+        driver.element().click(proceedToCheckout);
+        return new CheckOutPage(driver);
+    }
+
+    /**
+     * Click registerLogin button
+     *
+     * @return SignUpAndLogInPage
+     */
+    public SignUpAndLogInPage clickRegisterLoginButton() {
+
+        driver.element().click(registerLoginButton);
+        return new SignUpAndLogInPage(driver);
     }
 
 }

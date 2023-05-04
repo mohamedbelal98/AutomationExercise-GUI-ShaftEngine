@@ -5,13 +5,18 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.CartPage;
 import pages.ProductsPage;
+import pages.comman.AddToCart;
 
 import java.util.Objects;
 
 public class TestCart extends BaseTest {
 
+    AddToCart addToCart;
+
     @Test
     public void addProductsInCart() throws InterruptedException {
+
+        addToCart = new AddToCart(super.driver);
 
         int numberOfProductWillAdd = 2;
 
@@ -30,22 +35,22 @@ public class TestCart extends BaseTest {
         System.out.println(secondItemPrice);
 
         //Add first product item to cart.
-        productsPage.hoverAndClickInFirstProduct();
+        addToCart.hoverAndClickInFirstProduct();
 
         //Click continue button to continue shopping.
-        productsPage.clickOnContinueButton();
+        addToCart.clickOnContinueButton();
 
         //Add second product item to cart.
-        productsPage.hoverAndClickInSecondProduct();
+        addToCart.hoverAndClickInSecondProduct();
 
         //Click continue button to continue shopping.
-        productsPage.clickOnContinueButton();
+        addToCart.clickOnContinueButton();
 
         //Add second product item to cart.
-        productsPage.hoverAndClickInSecondProduct();
+        addToCart.hoverAndClickInSecondProduct();
 
         //ClickView cart button to go to cart page.
-        CartPage cartPage = productsPage.clickViewCartButton();
+        CartPage cartPage = addToCart.clickViewCartButton();
 
         Thread.sleep(4000);
 

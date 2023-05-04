@@ -18,12 +18,6 @@ public class ProductsPage {
     private final By searchInput = By.id("search_product");
     private final By searchButton = By.id("submit_search");
     private final By productNameList = By.xpath("//div[@class='productinfo text-center']/p");
-    private final By firstProductItem = By.xpath("/html/body/section[2]/div/div/div[2]/div[1]/div[2]/div/div[1]/div[1]");
-    private final By addToCartForFirstProductItem = By.xpath("/html/body/section[2]/div/div/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/a");
-    private final By secondProductItem = By.xpath("/html/body/section[2]/div/div/div[2]/div[1]/div[3]/div/div[1]/div[1]");
-    private final By addToCartForSecondProductItem = By.xpath("/html/body/section[2]/div/div/div[2]/div[1]/div[3]/div/div[1]/div[2]/div/a");
-    private final By continueButton = By.xpath("//button[@class='btn btn-success close-modal btn-block']");
-    private final By viewCartButton = By.xpath("//div[@class='modal-body']/p/a");
     private final By firstItemPriceText = By.xpath("//div[@class='features_items']/div[2]/div/div/div/h2");
     private final By secondItemPriceText = By.xpath("//div[@class='features_items']/div[3]/div/div/div/h2");
 
@@ -53,7 +47,7 @@ public class ProductsPage {
 
             if (!element.getText().contains("Top")) {
 
-                Assert.fail(element.getText() + "Not contain Search word (TOP) as Expected");
+                Assert.fail(element.getText() + "The result Not contain Search word (TOP) as Expected");
             }
         }
 
@@ -96,34 +90,6 @@ public class ProductsPage {
     public void clickSearchButton() {
 
         driver.element().click(searchButton);
-    }
-
-    public void hoverAndClickInFirstProduct() {
-
-        driver.element().hover(firstProductItem);
-        driver.element().click(addToCartForFirstProductItem);
-    }
-
-    public void hoverAndClickInSecondProduct() {
-
-        driver.element().hover(secondProductItem);
-        driver.element().click(addToCartForSecondProductItem);
-    }
-
-    public void clickOnContinueButton() {
-
-        driver.element().click(continueButton);
-    }
-
-    /**
-     * click in cart button
-     *
-     * @return CartPage
-     */
-    public CartPage clickViewCartButton() {
-
-        driver.element().click(viewCartButton);
-        return new CartPage(driver);
     }
 
     /**
