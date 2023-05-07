@@ -11,6 +11,7 @@ public class AccountPage {
     private final By accountCreatedLocator = By.xpath("//b[contains( . , 'Account Created!')]");
     private final By continueButton = By.linkText("Continue");
     private final By accountDeletedLocator = By.xpath("//b[contains(.,'Account Deleted!')]");
+    private final By orderPlacedLocator = By.xpath("//b[contains( . , 'Order Placed!')]");
 
     //Constructor
     public AccountPage(SHAFT.GUI.WebDriver driver) {
@@ -39,6 +40,12 @@ public class AccountPage {
     public void verifyThatAccountDeletedIsVisible() {
 
         driver.assertThat().element(accountDeletedLocator).isVisible().
+                withCustomReportMessage("Verify that 'Logged in as username' is visible").perform();
+    }
+
+    public void verifyThatOrderPlacedIsVisible() {
+
+        driver.assertThat().element(orderPlacedLocator).isVisible().
                 withCustomReportMessage("Verify that 'Logged in as username' is visible").perform();
     }
 

@@ -33,7 +33,8 @@ public class TestSearch extends BaseTest {
 
         Thread.sleep(4000);
 
-        productsPage.verifyAllTheProductsRelatedToSearchAreVisible();
+        //Verify the result of search is related to search word.
+        productsPage.verifyAllTheProductsRelatedToSearchAreVisible(jsonFileManager.getTestData("searchWord"));
     }
 
 }

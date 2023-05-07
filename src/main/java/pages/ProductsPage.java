@@ -30,7 +30,7 @@ public class ProductsPage {
      * Verify all list of search product are loaded successfully in products page
      * Verify all product are related to search(Contain search word in product name)
      */
-    public void verifyAllTheProductsRelatedToSearchAreVisible() {
+    public void verifyAllTheProductsRelatedToSearchAreVisible(String relatedSearchWord) {
 
         List<WebElement> listOfProducts = driver.getDriver().findElements(allProductsList);
 
@@ -45,7 +45,7 @@ public class ProductsPage {
 
         for (WebElement element : list) {
 
-            if (!element.getText().contains("Top")) {
+            if (!element.getText().contains(relatedSearchWord)) {
 
                 Assert.fail(element.getText() + "The result Not contain Search word (TOP) as Expected");
             }

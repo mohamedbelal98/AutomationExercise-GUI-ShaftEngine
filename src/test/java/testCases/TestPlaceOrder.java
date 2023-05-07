@@ -19,7 +19,7 @@ public class TestPlaceOrder extends BaseTest {
     @BeforeClass
     public void beforeClass() {
 
-        jsonFileManager = new JSONFileManager("src/test/resources/testDataFiles/register.json");
+        jsonFileManager = new JSONFileManager("src/test/resources/testDataFiles/placeOrder.json");
     }
 
     @Test
@@ -92,7 +92,22 @@ public class TestPlaceOrder extends BaseTest {
 
         checkOutPage.fillDescription("Random Description");
 
-        checkOutPage.clickPlaceOrderButton();
+        PaymentPage paymentPage = checkOutPage.clickPlaceOrderButton();
+
+        paymentPage.verifyPaymentTextIsVisible();
+
+        paymentPage.fillPaymentDetails(
+                jsonFileManager.getTestData("NameOfCard"),
+                jsonFileManager.getTestData("CardNumber"),
+                jsonFileManager.getTestData("cvc"),
+                jsonFileManager.getTestData("monthNumber"),
+                jsonFileManager.getTestData("year")
+        );
+
+        AccountPage accountPage1 = paymentPage.clickPayAndConfirmOrder();
+
+        accountPage1.verifyThatOrderPlacedIsVisible();
+
     }
 
 }

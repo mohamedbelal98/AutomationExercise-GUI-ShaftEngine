@@ -36,9 +36,14 @@ public class CheckOutPage {
         driver.element().type(descriptionLocator, description);
     }
 
-    public void clickPlaceOrderButton() {
+    /**
+     *
+     * @return PaymentPage
+     */
+    public PaymentPage clickPlaceOrderButton() {
 
         driver.element().click(placeOrderButton);
+        return new PaymentPage(driver);
     }
 
 }

@@ -23,7 +23,7 @@ public class TestCart extends BaseTest {
         //Verify that home page is visible successfully.
         homePage.verifyThatHomePageIsVisibleSuccessfully();
 
-        //Click 'Products' button.
+        //Click Products button.
         ProductsPage productsPage = homePage.clickProductsButton();
 
         //Save the first product price in the product page.
