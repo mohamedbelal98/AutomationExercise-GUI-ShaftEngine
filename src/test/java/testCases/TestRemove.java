@@ -25,8 +25,6 @@ public class TestRemove extends BaseTest {
         cartPage.deleteProductFromCart();
 
         //Verify that product in cart is empty
-
-
         cartPage.verifyNumberOfItemInCart(0);
     }
 
