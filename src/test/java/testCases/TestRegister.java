@@ -71,15 +71,15 @@ public class TestRegister extends BaseTest {
 
         accountPage.verifyThatAccountCreatedIsVisible();
 
-        HomePage homePage1 = accountPage.clickContinueButton();
+        homePage = accountPage.clickContinueButton();
 
-        homePage1.verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("loginName"));
+        homePage.verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("loginName"));
 
-        AccountPage accountPage1 = homePage1.clickDeleteAccountButton();
+        accountPage = homePage.clickDeleteAccountButton();
 
-        accountPage1.verifyThatAccountDeletedIsVisible();
+        accountPage.verifyThatAccountDeletedIsVisible();
 
-        accountPage1.clickContinueButton();
+        accountPage.clickContinueButton();
 
     }
 

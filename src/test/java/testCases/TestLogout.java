@@ -31,11 +31,11 @@ public class TestLogout extends BaseTest {
                 jsonFileManager.getTestData("password")
         );
 
-        HomePage homePage1 = signUpAndLogInPage.clickLoginButton();
+        homePage = signUpAndLogInPage.clickLoginButton();
 
-        homePage1.verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("name"));
+        homePage.verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("name"));
 
-        SignUpAndLogInPage signUpAndLogInPage1 = homePage1.clickLogoutButton();
+        SignUpAndLogInPage signUpAndLogInPage1 = homePage.clickLogoutButton();
 
         signUpAndLogInPage1.verifyNewUserSignupIsVisible();
     }

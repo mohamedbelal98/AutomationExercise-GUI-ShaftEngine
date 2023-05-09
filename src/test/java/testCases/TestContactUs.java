@@ -40,9 +40,9 @@ public class TestContactUs extends BaseTest {
 
         contactUsPage.VerifySuccessMessageSuccessYourDetailsHaveBeenSubmittedSuccessfullyIsVisible();
 
-        HomePage homePage1 = contactUsPage.clickHomeButton();
+        homePage =contactUsPage.clickHomeButton();
 
-        homePage1.verifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
     }
 
 }

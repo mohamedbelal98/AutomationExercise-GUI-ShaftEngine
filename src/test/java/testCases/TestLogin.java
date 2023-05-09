@@ -32,11 +32,11 @@ public class TestLogin extends BaseTest {
                 jsonFileManager.getTestData("password")
         );
 
-        HomePage homePage1 = signUpAndLogInPage.clickLoginButton();
+        homePage =signUpAndLogInPage.clickLoginButton();
 
-        homePage1.verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("name"));
+        homePage.verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("name"));
 
-        homePage1.clickLogoutButton();
+        homePage.clickLogoutButton();
     }
 
     @Test
