@@ -93,6 +93,8 @@ public class ProductsPage {
     }
 
     /**
+     * get first item price text
+     *
      * @return firstItemPriceText
      */
     public String verifyFirstItemPrice() {
@@ -101,6 +103,8 @@ public class ProductsPage {
     }
 
     /**
+     * get second item price text
+     *
      * @return secondItemPriceText
      */
     public String verifySecondItemPrice() {

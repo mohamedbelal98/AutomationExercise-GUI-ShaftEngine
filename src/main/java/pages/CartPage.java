@@ -19,6 +19,7 @@ public class CartPage {
     public final By secondItemQuantity = By.xpath("//tr[@id='product-2']/td[4]/button");
     private final By proceedToCheckout = By.xpath("//a[contains(. , 'Proceed To Checkout')]");
     private final By registerLoginButton = By.xpath("//div[@class='modal-body']/p[2]/a");
+    private final By deleteButton = By.className("cart_quantity_delete");
 
     //Constructor
     public CartPage(SHAFT.GUI.WebDriver driver) {
@@ -76,6 +77,11 @@ public class CartPage {
         }
     }
 
+    /**
+     * click proceedToCheckout button
+     *
+     * @return CheckOutPage
+     */
     public CheckOutPage clickProceedToCheckOut() {
 
         driver.element().click(proceedToCheckout);
@@ -91,6 +97,11 @@ public class CartPage {
 
         driver.element().click(registerLoginButton);
         return new SignUpAndLogInPage(driver);
+    }
+
+    public void deleteProductFromCart() {
+
+        driver.element().click(deleteButton);
     }
 
 }

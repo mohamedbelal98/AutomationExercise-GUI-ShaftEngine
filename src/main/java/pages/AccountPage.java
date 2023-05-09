@@ -26,7 +26,7 @@ public class AccountPage {
     }
 
     /**
-     * Click 'Continue' button
+     * Click ContinueButton
      *
      * @return HomePage
      */

@@ -67,10 +67,9 @@ public class AccountInformationPage {
      * @param city
      * @param zipcode
      * @param mobileNumber
-     * @return AccountInformationPage
      */
-    public AccountInformationPage fillAddressInformation(String firstName, String lastName, String company, String address1, String address2, String country,
-                                                         String state, String city, String zipcode, String mobileNumber) {
+    public void fillAddressInformation(String firstName, String lastName, String company, String address1, String address2, String country,
+                                       String state, String city, String zipcode, String mobileNumber) {
 
         driver.element().type(firstNameInput, firstName);
         driver.element().type(lastNameInput, lastName);
@@ -82,10 +81,13 @@ public class AccountInformationPage {
         driver.element().type(cityInput, city);
         driver.element().type(zipcodeInput, zipcode);
         driver.element().type(mobileNumberInput, mobileNumber);
-        return this;
     }
 
-    //Click Create account button
+    /**
+     * Click Create account button
+     *
+     * @return AccountPage
+     */
     public AccountPage clickCreateAccountButton() {
 
         driver.element().click(createAccountButton);

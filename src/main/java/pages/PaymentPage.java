@@ -47,6 +47,7 @@ public class PaymentPage {
     }
 
     /**
+     * click payAndConfirmOrder button
      *
      * @return AccountPage
      */
