@@ -1,4 +1,4 @@
-package testCases;
+package testCases.testUtilities;
 
 import base.BaseTest;
 import com.shaft.tools.io.JSONFileManager;

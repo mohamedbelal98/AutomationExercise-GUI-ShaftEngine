@@ -1,11 +1,10 @@
-package testCases;
+package testCases.testUtilities;
 
 import base.BaseTest;
 import com.shaft.tools.io.JSONFileManager;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.ContactUsPage;
-import pages.HomePage;
 
 public class TestContactUs extends BaseTest {
 
@@ -31,7 +30,7 @@ public class TestContactUs extends BaseTest {
                 jsonFileManager.getTestData("email"),
                 jsonFileManager.getTestData("subject"),
                 jsonFileManager.getTestData("message"),
-                "src/test/resources/Utilities/testPhoto.webp"
+                "src/test/resources/Util/testPhoto.webp"
         );
 
         contactUsPage.clickSubmitButton();

@@ -1,4 +1,4 @@
-package testCases;
+package testCases.testAuthentication;
 
 import base.BaseTest;
 import com.shaft.tools.io.JSONFileManager;
@@ -6,7 +6,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.AccountPage;
 import pages.AccountInformationPage;
-import pages.HomePage;
 import pages.SignUpAndLogInPage;
 
 import java.util.Date;
