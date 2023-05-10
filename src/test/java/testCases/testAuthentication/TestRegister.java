@@ -29,9 +29,9 @@ public class TestRegister extends BaseTest {
 
         String email = jsonFileManager.getTestData("email") + current_time.substring(6) + "@test.com";
 
-        homePage.verifyThatHomePageIsVisibleSuccessfully();
+        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
 
-        SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
+        SignUpAndLogInPage signUpAndLogInPage = homePage.getHomePageHeader().clickSignUpAndLoginButton();
 
         signUpAndLogInPage.verifyNewUserSignupIsVisible();
 
@@ -72,9 +72,9 @@ public class TestRegister extends BaseTest {
 
         homePage = accountPage.clickContinueButton();
 
-        homePage.verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("loginName"));
+        homePage.getHomePageVerification().verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("loginName"));
 
-        accountPage = homePage.clickDeleteAccountButton();
+        accountPage = homePage.getHomePageHeader().clickDeleteAccountButton();
 
         accountPage.verifyThatAccountDeletedIsVisible();
 
@@ -85,9 +85,9 @@ public class TestRegister extends BaseTest {
     @Test
     public void RegisterUserWithExistingEmail() {
 
-        homePage.verifyThatHomePageIsVisibleSuccessfully();
+        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
 
-        SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
+        SignUpAndLogInPage signUpAndLogInPage = homePage.getHomePageHeader().clickSignUpAndLoginButton();
 
         signUpAndLogInPage.verifyNewUserSignupIsVisible();
 

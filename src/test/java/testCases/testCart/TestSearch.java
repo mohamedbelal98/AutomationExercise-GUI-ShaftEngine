@@ -19,9 +19,9 @@ public class TestSearch extends BaseTest {
     @Test
     public void SearchProduct() throws InterruptedException {
 
-        homePage.verifyThatHomePageIsVisibleSuccessfully();
+        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
 
-        ProductsPage productsPage = homePage.clickProductsButton();
+        ProductsPage productsPage = homePage.getHomePageHeader().clickProductsButton();
 
         productsPage.saleImageIsVisible();
 

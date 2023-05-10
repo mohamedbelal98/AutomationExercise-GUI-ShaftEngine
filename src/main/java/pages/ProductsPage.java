@@ -43,13 +43,22 @@ public class ProductsPage {
 
         List<WebElement> list = driver.getDriver().findElements(productNameList);
 
-        for (WebElement element : list) {
+        list.forEach(element -> {
 
             if (!element.getText().contains(relatedSearchWord)) {
 
                 Assert.fail(element.getText() + "The result Not contain Search word (TOP) as Expected");
             }
-        }
+        });
+
+          //Another Way
+//        for (WebElement element : list) {
+//
+//            if (!element.getText().contains(relatedSearchWord)) {
+//
+//                Assert.fail(element.getText() + "The result Not contain Search word (TOP) as Expected");
+//            }
+//        }
 
     }
 

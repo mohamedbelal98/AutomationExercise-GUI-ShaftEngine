@@ -22,9 +22,9 @@ public class TestLogin extends BaseTest {
     @Test
     public void LoginUserWithCorrectEmailAndPassword() {
 
-        homePage.verifyThatHomePageIsVisibleSuccessfully();
+        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
 
-        SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
+        SignUpAndLogInPage signUpAndLogInPage = homePage.getHomePageHeader().clickSignUpAndLoginButton();
 
         signUpAndLogInPage.verifyLoginToYourAccountIsVisible();
 
@@ -35,17 +35,17 @@ public class TestLogin extends BaseTest {
 
         homePage =signUpAndLogInPage.clickLoginButton();
 
-        homePage.verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("name"));
+        homePage.getHomePageVerification().verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("name"));
 
-        homePage.clickLogoutButton();
+        homePage.getHomePageHeader().clickLogoutButton();
     }
 
     @Test
     public void LoginUserWithIncorrectEmailAndPassword() {
 
-        homePage.verifyThatHomePageIsVisibleSuccessfully();
+        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
 
-        SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
+        SignUpAndLogInPage signUpAndLogInPage = homePage.getHomePageHeader().clickSignUpAndLoginButton();
 
         signUpAndLogInPage.verifyLoginToYourAccountIsVisible();
 

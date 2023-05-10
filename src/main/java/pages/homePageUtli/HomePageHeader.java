@@ -1,17 +1,15 @@
-package pages;
+package pages.homePageUtli;
 
 import com.shaft.driver.SHAFT;
-import com.shaft.validation.Validations;
 import org.openqa.selenium.By;
+import pages.*;
 
-public class HomePage {
+public class HomePageHeader {
 
     SHAFT.GUI.WebDriver driver;
 
     //Locators
-    private final By logoLocator = By.xpath("//img[@alt='Website for automation practice']");
     private final By signUpAndLoginLocator = By.xpath("//a[contains(. , ' Signup / Login')]");
-    private final By loggedInAsLocator = By.xpath("//a[contains( . , ' Logged in as ')]");
     private final By deleteAccountButton = By.xpath("//a[contains( . , ' Delete Account')]");
     private final By logoutButton = By.xpath("//a[contains( . , ' Logout')]");
     private final By contactUsButton = By.xpath("//a[contains( . , ' Contact us')]");
@@ -19,16 +17,8 @@ public class HomePage {
     private final By productsButton = By.xpath("//a[contains( . , ' Products')]");
     private final By cartButton = By.xpath("//ul[@class='nav navbar-nav']/li[3]");
 
-    //Constructor
-    public HomePage(SHAFT.GUI.WebDriver driver) {
+    public HomePageHeader(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
-    }
-
-    //Verify that home page is visible successfully
-    public void verifyThatHomePageIsVisibleSuccessfully() {
-
-        driver.assertThat().element(logoLocator).isVisible().
-                withCustomReportMessage("Verify that home page is visible successfully").perform();
     }
 
     /**
@@ -42,18 +32,6 @@ public class HomePage {
         return new SignUpAndLogInPage(driver);
     }
 
-    /**
-     * Verify that 'Logged in as username' is visible
-     *
-     * @param name
-     */
-    public void verifyThatLoggedInAsIsVisible(String name) {
-
-        driver.assertThat().element(loggedInAsLocator).isVisible().
-                withCustomReportMessage(" Verify that 'Logged in as username' is visible").perform();
-
-        driver.assertThat().element(loggedInAsLocator).text().isEqualTo(name).perform();
-    }
 
     /**
      * click in delete account button in the home page

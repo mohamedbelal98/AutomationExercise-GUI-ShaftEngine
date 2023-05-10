@@ -10,9 +10,9 @@ public class TestProducts extends BaseTest {
     @Test
     public void VerifyAllProductsAndProductDetailPage() {
 
-        homePage.verifyThatHomePageIsVisibleSuccessfully();
+        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
 
-        ProductsPage productsPage = homePage.clickProductsButton();
+        ProductsPage productsPage = homePage.getHomePageHeader().clickProductsButton();
 
         productsPage.saleImageIsVisible();
 

@@ -22,7 +22,7 @@ public class TestSubscription extends BaseTest {
 
         footer = new Footer(super.driver);
 
-        homePage.verifyThatHomePageIsVisibleSuccessfully();
+        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
 
         footer.scrollToFooter();
 
@@ -38,11 +38,11 @@ public class TestSubscription extends BaseTest {
 
         footer = new Footer(super.driver);
 
-        homePage.verifyThatHomePageIsVisibleSuccessfully();
+        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
 
-        homePage.verifyThatHomePageIsVisibleSuccessfully();
+        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
 
-        homePage.clickCartButton();
+        homePage.getHomePageHeader().clickCartButton();
 
         footer.scrollToFooter();
 

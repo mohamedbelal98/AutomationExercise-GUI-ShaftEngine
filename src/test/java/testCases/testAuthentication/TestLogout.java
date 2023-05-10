@@ -19,9 +19,9 @@ public class TestLogout extends BaseTest {
     @Test
     public void logOutUser() {
 
-        homePage.verifyThatHomePageIsVisibleSuccessfully();
+        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
 
-        SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
+        SignUpAndLogInPage signUpAndLogInPage = homePage.getHomePageHeader().clickSignUpAndLoginButton();
 
         signUpAndLogInPage.verifyLoginToYourAccountIsVisible();
 
@@ -32,9 +32,9 @@ public class TestLogout extends BaseTest {
 
         homePage = signUpAndLogInPage.clickLoginButton();
 
-        homePage.verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("name"));
+        homePage.getHomePageVerification().verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("name"));
 
-        SignUpAndLogInPage signUpAndLogInPage1 = homePage.clickLogoutButton();
+        SignUpAndLogInPage signUpAndLogInPage1 = homePage.getHomePageHeader().clickLogoutButton();
 
         signUpAndLogInPage1.verifyNewUserSignupIsVisible();
     }

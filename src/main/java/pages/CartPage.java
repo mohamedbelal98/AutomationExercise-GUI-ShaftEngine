@@ -3,8 +3,11 @@ package pages;
 import com.shaft.driver.SHAFT;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.time.Duration;
 import java.util.List;
 
 public class CartPage {
@@ -99,9 +102,14 @@ public class CartPage {
         return new SignUpAndLogInPage(driver);
     }
 
+    //Delete product in the cart and wait to delete button to be inVisible
     public void deleteProductFromCart() {
 
         driver.element().click(deleteButton);
+
+        WebDriverWait webDriverWait = new WebDriverWait(driver.getDriver(), Duration.ofSeconds(10));
+
+        webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated(deleteButton));
     }
 
 }
