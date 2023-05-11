@@ -20,6 +20,7 @@ public class ProductsPage {
     private final By productNameList = By.xpath("//div[@class='productinfo text-center']/p");
     private final By firstItemPriceText = By.xpath("//div[@class='features_items']/div[2]/div/div/div/h2");
     private final By secondItemPriceText = By.xpath("//div[@class='features_items']/div[3]/div/div/div/h2");
+    private final By titlePageText = By.xpath("//div[@class='features_items']/h2");
 
     //Constructor
     public ProductsPage(SHAFT.GUI.WebDriver driver) {
@@ -51,7 +52,7 @@ public class ProductsPage {
             }
         });
 
-          //Another Way
+        //Another Way
 //        for (WebElement element : list) {
 //
 //            if (!element.getText().contains(relatedSearchWord)) {
@@ -60,6 +61,13 @@ public class ProductsPage {
 //            }
 //        }
 
+    }
+
+    //Verify product page is loaded successfully
+    public void saleImageIsVisible() {
+
+        driver.assertThat().element(saleImageLocator).isVisible().
+                withCustomReportMessage("Verify user is navigated to ALL PRODUCTS page successfully").perform();
     }
 
     //Verify all products is visible and loaded
@@ -71,13 +79,6 @@ public class ProductsPage {
 
             element.isDisplayed();
         }
-    }
-
-    //Verify product page is loaded successfully
-    public void saleImageIsVisible() {
-
-        driver.assertThat().element(saleImageLocator).isVisible().
-                withCustomReportMessage("Verify user is navigated to ALL PRODUCTS page successfully").perform();
     }
 
     /**
@@ -119,6 +120,19 @@ public class ProductsPage {
     public String verifySecondItemPrice() {
 
         return driver.element().getText(secondItemPriceText);
+    }
+
+    /**
+     * Verify title for product page is correct.
+     *
+     * @param title
+     */
+    public void verifyTitleForProductPage(String title) {
+
+        driver.assertThat().element(titlePageText).isVisible().
+                withCustomReportMessage("Verify title for product page is correct.").perform();
+
+        driver.assertThat().element(titlePageText).text().isEqualTo(title).perform();
     }
 
 }

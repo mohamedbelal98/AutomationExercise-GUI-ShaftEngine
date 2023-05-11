@@ -16,6 +16,8 @@ public class TestProducts extends BaseTest {
 
         productsPage.saleImageIsVisible();
 
+        productsPage.verifyTitleForProductPage("ALL PRODUCTS");
+
         productsPage.productsListIsVisible();
 
         SingleProductPage singleProductPage = productsPage.clickOnViewProductsForFirstProduct();

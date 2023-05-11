@@ -1,0 +1,33 @@
+package testCases;
+
+import base.BaseTest;
+import org.testng.annotations.Test;
+import pages.ProductsPage;
+import pages.comman.LeftSideBar;
+
+public class TestCategoryAndBrand extends BaseTest {
+
+    LeftSideBar leftSideBar;
+
+    @Test
+    public void ViewCategoryProducts() {
+
+        leftSideBar = new LeftSideBar(super.driver);
+
+        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+
+        leftSideBar.verifyCategoryTextIsVisible();
+
+        leftSideBar.clickWomanCategoryButton();
+
+        ProductsPage productsPage = leftSideBar.clickDressButton();
+
+        productsPage.verifyTitleForProductPage("WOMEN - DRESS PRODUCTS");
+
+        leftSideBar.clickMenCategoryButton();
+
+        leftSideBar.clickJeansButton();
+
+        productsPage.verifyTitleForProductPage("MEN - JEANS PRODUCTS");
+    }
+}
