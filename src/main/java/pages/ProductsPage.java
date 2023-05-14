@@ -48,7 +48,7 @@ public class ProductsPage {
 
             if (!element.getText().contains(relatedSearchWord)) {
 
-                Assert.fail(element.getText() + "The result Not contain Search word (TOP) as Expected");
+                Assert.fail("The result is Not Related to your search. ("+element.getText() +")");
             }
         });
 

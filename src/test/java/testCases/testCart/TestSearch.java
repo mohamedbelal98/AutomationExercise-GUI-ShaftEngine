@@ -4,10 +4,14 @@ import base.BaseTest;
 import com.shaft.tools.io.JSONFileManager;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import pages.CartPage;
 import pages.ProductsPage;
+import pages.SignUpAndLogInPage;
+import pages.comman.AddToCart;
 
 public class TestSearch extends BaseTest {
 
+    AddToCart addToCart;
     JSONFileManager jsonFileManager;
 
     @BeforeClass
@@ -35,6 +39,50 @@ public class TestSearch extends BaseTest {
 
         //Verify the result of search is related to search word.
         productsPage.verifyAllTheProductsRelatedToSearchAreVisible(jsonFileManager.getTestData("searchWord"));
+    }
+
+    @Test
+    public void SearchProductsAndVerifyCartAfterLogin() {
+
+        addToCart = new AddToCart(super.driver);
+
+        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+
+        ProductsPage productsPage = homePage.getHomePageHeader().clickProductsButton();
+
+        productsPage.saleImageIsVisible();
+
+        productsPage.verifyTitleForProductPage("ALL PRODUCTS");
+
+        productsPage.productsListIsVisible();
+
+        productsPage.enterSearchInput(jsonFileManager.getTestData("BlueTop"));
+
+        productsPage.clickSearchButton();
+
+        productsPage.verifyAllTheProductsRelatedToSearchAreVisible(jsonFileManager.getTestData("BlueTop"));
+
+        addToCart.hoverAndClickInFirstProduct();
+
+        CartPage cartPage = addToCart.clickViewCartButton();
+
+        cartPage.verifyNumberOfItemInCart(1);
+
+        SignUpAndLogInPage signUpAndLogInPage = homePage.getHomePageHeader().clickSignUpAndLoginButton();
+
+        signUpAndLogInPage.verifyLoginToYourAccountIsVisible();
+
+        signUpAndLogInPage.loginToYourAccount(
+                jsonFileManager.getTestData("email"),
+                jsonFileManager.getTestData("password")
+        );
+
+        homePage = signUpAndLogInPage.clickLoginButton();
+
+        cartPage = homePage.getHomePageHeader().clickCartButton();
+
+        cartPage.verifyNumberOfItemInCart(1);
+
     }
 
 }
