@@ -40,10 +40,10 @@ public class AccountInformationPage {
     }
 
     /**
-     * @param password
-     * @param day
-     * @param month
-     * @param year
+     * @param password enter password.
+     * @param day      choose day.
+     * @param month    choose month.
+     * @param year     choose year.
      */
     public void fillAccountInformation(String password, String day, String month, String year) {
 
@@ -57,16 +57,16 @@ public class AccountInformationPage {
     }
 
     /**
-     * @param firstName
-     * @param lastName
-     * @param company
-     * @param address1
-     * @param address2
-     * @param country
-     * @param state
-     * @param city
-     * @param zipcode
-     * @param mobileNumber
+     * @param firstName    enter first name.
+     * @param lastName     enter last name.
+     * @param company      enter company name.
+     * @param address1     enter address1.
+     * @param address2     enter address2.
+     * @param country      choose country.
+     * @param state        enter state.
+     * @param city         enter city.
+     * @param zipcode      enter zipcode.
+     * @param mobileNumber enter mobile number.
      */
     public void fillAddressInformation(String firstName, String lastName, String company, String address1, String address2, String country,
                                        String state, String city, String zipcode, String mobileNumber) {

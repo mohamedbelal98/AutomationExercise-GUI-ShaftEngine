@@ -17,8 +17,6 @@ public class TestLogin extends BaseTest {
     }
 
 
-
-
     @Test
     public void LoginUserWithCorrectEmailAndPassword() {
 
@@ -33,7 +31,7 @@ public class TestLogin extends BaseTest {
                 jsonFileManager.getTestData("password")
         );
 
-        homePage =signUpAndLogInPage.clickLoginButton();
+        homePage = signUpAndLogInPage.clickLoginButton();
 
         homePage.getHomePageVerification().verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("name"));
 

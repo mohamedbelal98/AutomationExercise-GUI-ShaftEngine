@@ -14,6 +14,7 @@ public class CheckOutPage {
     private final By descriptionLocator = By.className("form-control");
     private final By placeOrderButton = By.xpath("//a[contains( . , 'Place Order')]");
 
+    //Constructor
     public CheckOutPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
@@ -31,12 +32,16 @@ public class CheckOutPage {
         Validations.assertThat().element(reviewYourOrderLocator).text().isEqualTo("Review Your Order").perform();
     }
 
+    /**
+     * @param description enter description
+     */
     public void fillDescription(String description) {
 
         driver.element().type(descriptionLocator, description);
     }
 
     /**
+     * click in place order button in checkOut page.
      *
      * @return PaymentPage
      */

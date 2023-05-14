@@ -65,8 +65,8 @@ public class SignUpAndLogInPage {
     }
 
     /**
-     * @param email
-     * @param password
+     * @param email    enter email to login.
+     * @param password enter password to login.
      */
     public void loginToYourAccount(String email, String password) {
 

@@ -48,7 +48,7 @@ public class ProductsPage {
 
             if (!element.getText().contains(relatedSearchWord)) {
 
-                Assert.fail("The result is Not Related to your search. ("+element.getText() +")");
+                Assert.fail("The result is Not Related to your search. (" + element.getText() + ")");
             }
         });
 
@@ -125,7 +125,7 @@ public class ProductsPage {
     /**
      * Verify title for product page is correct.
      *
-     * @param title
+     * @param title enter a title for product page to validate on the title to ensure the page is navigated to the right page or not.
      */
     public void verifyTitleForProductPage(String title) {
 

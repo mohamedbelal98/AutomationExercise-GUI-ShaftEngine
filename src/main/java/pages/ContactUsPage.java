@@ -35,12 +35,11 @@ public class ContactUsPage {
     }
 
     /**
-     *
-     * @param name
-     * @param email
-     * @param subject
-     * @param message
-     * @param filePath
+     * @param name     enter name.
+     * @param email    enter email.
+     * @param subject  enter subject.
+     * @param message  enter message.
+     * @param filePath put path for file to upload.
      */
     public void fillNameEmailSubjectAndMessage(String name, String email, String subject, String message, String filePath) {
 

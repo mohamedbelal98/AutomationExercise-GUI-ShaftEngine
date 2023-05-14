@@ -17,7 +17,7 @@ public class PaymentPage {
     private final By expirationYearInput = By.name("expiry_year");
     private final By payAndConfirmOrder = By.xpath("//button[@data-qa='pay-button']");
 
-
+    //Constructor
     public PaymentPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
@@ -31,11 +31,11 @@ public class PaymentPage {
     }
 
     /**
-     * @param nameOfCard
-     * @param cardNumber
-     * @param cvc
-     * @param expirationMonth
-     * @param expirationYear
+     * @param nameOfCard      enter card name.
+     * @param cardNumber      enter card number like visa.
+     * @param cvc             enter cvc number.
+     * @param expirationMonth enter date for expiration month.
+     * @param expirationYear  enter date for expiration year.
      */
     public void fillPaymentDetails(String nameOfCard, String cardNumber, String cvc, String expirationMonth, String expirationYear) {
 

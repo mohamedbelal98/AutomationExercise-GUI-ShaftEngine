@@ -11,6 +11,7 @@ public class HomePageVerification {
     private final By logoLocator = By.xpath("//img[@alt='Website for automation practice']");
     private final By loggedInAsLocator = By.xpath("//a[contains( . , ' Logged in as ')]");
 
+    //Constructor
     public HomePageVerification(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
@@ -25,7 +26,7 @@ public class HomePageVerification {
     /**
      * Verify that 'Logged in as username' is visible
      *
-     * @param name
+     * @param name enter name for account to verify this name is correct or not.
      */
     public void verifyThatLoggedInAsIsVisible(String name) {
 

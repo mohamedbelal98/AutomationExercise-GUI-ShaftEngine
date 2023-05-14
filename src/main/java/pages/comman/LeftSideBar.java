@@ -19,7 +19,7 @@ public class LeftSideBar {
     private final By poloBrandLink = By.xpath("//div[@class='brands-name']/ul/li[1]");
     private final By HAndMBrandLink = By.xpath("//div[@class='brands-name']/ul/li[2]");
 
-
+    //Constructor
     public LeftSideBar(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
@@ -38,6 +38,11 @@ public class LeftSideBar {
         driver.element().click(womanCategoryButton);
     }
 
+    /**
+     * click in dress link in category section.
+     *
+     * @return ProductsPage
+     */
     public ProductsPage clickDressButton() {
 
         driver.element().click(dressSubCategory);
@@ -49,6 +54,11 @@ public class LeftSideBar {
         driver.element().click(menCategoryButton);
     }
 
+    /**
+     * click jeans link in men category.
+     *
+     * @return ProductsPage
+     */
     public ProductsPage clickJeansButton() {
 
         driver.element().click(jeansSubCategory);
@@ -65,12 +75,22 @@ public class LeftSideBar {
                 withCustomReportMessage("Verify brand text is Correct.").perform();
     }
 
+    /**
+     * click in polo link in brand section.
+     *
+     * @return ProductsPage
+     */
     public ProductsPage clickPoloBrandLink() {
 
         driver.element().click(poloBrandLink);
         return new ProductsPage(driver);
     }
 
+    /**
+     * click in H&M in brand section.
+     *
+     * @return ProductsPage
+     */
     public ProductsPage clickHAndMBrandLink() {
 
         driver.element().click(HAndMBrandLink);

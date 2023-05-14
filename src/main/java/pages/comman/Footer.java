@@ -36,9 +36,7 @@ public class Footer {
     }
 
     /**
-     * @param email
-     *
-     * click Subscribe Button
+     * @param email click Subscribe Button
      */
     public void fillEmailAddressInput(String email) {
 

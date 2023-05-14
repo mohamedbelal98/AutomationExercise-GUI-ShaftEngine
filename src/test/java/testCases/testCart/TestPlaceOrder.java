@@ -199,7 +199,7 @@ public class TestPlaceOrder extends BaseTest {
         accountPage.verifyThatAccountDeletedIsVisible();
 
         accountPage.clickContinueButton();
-        
+
     }
 
 }

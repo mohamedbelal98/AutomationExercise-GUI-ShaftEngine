@@ -32,7 +32,7 @@ public class CartPage {
     /**
      * Verify the number of item in the cart and check the size of the list of product is he same I entered or not.
      *
-     * @param numberOfItem
+     * @param numberOfItem enter number of item already added to cart to can verify number of item in cart is correct or not.
      */
     public void verifyNumberOfItemInCart(int numberOfItem) {
 
@@ -67,8 +67,8 @@ public class CartPage {
     /**
      * Verify Quantity Number in the cart page is correct or not
      *
-     * @param element
-     * @param quantityNumber
+     * @param element        enter element locator to verify number in this product.
+     * @param quantityNumber enter quantity of product to verify the number of product is correct or not.
      */
     public void verifyItemQuantityInCart(By element, int quantityNumber) {
 

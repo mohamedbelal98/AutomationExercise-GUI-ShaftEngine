@@ -16,6 +16,7 @@ public class AddToCart {
     private final By continueButton = By.xpath("//button[@class='btn btn-success close-modal btn-block']");
     private final By viewCartButton = By.xpath("//div[@class='modal-body']/p/a");
 
+    //Constructor
     public AddToCart(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }

@@ -17,6 +17,7 @@ public class HomePageHeader {
     private final By productsButton = By.xpath("//a[contains( . , ' Products')]");
     private final By cartButton = By.xpath("//ul[@class='nav navbar-nav']/li[3]");
 
+    //Constructor
     public HomePageHeader(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
