@@ -30,4 +30,23 @@ public class TestCategoryAndBrand extends BaseTest {
 
         productsPage.verifyTitleForProductPage("MEN - JEANS PRODUCTS");
     }
+
+    @Test
+    public void ViewBrandProducts() {
+
+        leftSideBar = new LeftSideBar(super.driver);
+
+        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+
+        leftSideBar.verifyBrandTextIsVisible();
+
+        ProductsPage productsPage = leftSideBar.clickPoloBrandLink();
+
+        productsPage.verifyTitleForProductPage("BRAND - POLO PRODUCTS");
+
+        productsPage = leftSideBar.clickHAndMBrandLink();
+
+        productsPage.verifyTitleForProductPage("BRAND - H&M PRODUCTS");
+    }
+
 }
