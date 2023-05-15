@@ -20,9 +20,9 @@ public class TestReview extends BaseTest {
     @Test
     public void AddReviewOnProduct() {
 
-        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
-        ProductsPage productsPage = homePage.getHomePageHeader().clickProductsButton();
+        ProductsPage productsPage = homePage.clickProductsButton();
 
         productsPage.saleImageIsVisible();
 

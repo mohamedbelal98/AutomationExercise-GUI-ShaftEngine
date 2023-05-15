@@ -1,26 +1,36 @@
-package pages.homePageUtli;
+package pages.homePage;
 
 import com.shaft.driver.SHAFT;
-import org.openqa.selenium.By;
 import pages.*;
 
-public class HomePageHeader {
+public class HomePage {
 
     SHAFT.GUI.WebDriver driver;
 
-    //Locators
-    private final By signUpAndLoginLocator = By.xpath("//a[contains(. , ' Signup / Login')]");
-    private final By deleteAccountButton = By.xpath("//a[contains( . , ' Delete Account')]");
-    private final By logoutButton = By.xpath("//a[contains( . , ' Logout')]");
-    private final By contactUsButton = By.xpath("//a[contains( . , ' Contact us')]");
-    private final By testCasesButton = By.xpath("//a[contains( . , ' Test Cases')]");
-    private final By productsButton = By.xpath("//a[contains( . , ' Products')]");
-    private final By cartButton = By.xpath("//ul[@class='nav navbar-nav']/li[3]");
-
     //Constructor
-    public HomePageHeader(SHAFT.GUI.WebDriver driver) {
+    public HomePage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
+
+    public void verifyThatHomePageIsVisibleSuccessfully() {
+
+        driver.assertThat().element(HomePageElements.logoLocator()).isVisible().
+                withCustomReportMessage("Verify that home page is visible successfully").perform();
+    }
+
+    /**
+     * Verify that 'Logged in as username' is visible
+     *
+     * @param name enter name for account to verify this name is correct or not.
+     */
+    public void verifyThatLoggedInAsIsVisible(String name) {
+
+        driver.assertThat().element(HomePageElements.loggedInAsLocator()).isVisible().
+                withCustomReportMessage(" Verify that 'Logged in as username' is visible").perform();
+
+        driver.assertThat().element(HomePageElements.loggedInAsLocator()).text().isEqualTo(name).perform();
+    }
+
 
     /**
      * click in signUpAndLogin button in the home page
@@ -29,7 +39,7 @@ public class HomePageHeader {
      */
     public SignUpAndLogInPage clickSignUpAndLoginButton() {
 
-        driver.element().click(signUpAndLoginLocator);
+        driver.element().click(HomePageElements.signUpAndLoginLocator());
         return new SignUpAndLogInPage(driver);
     }
 
@@ -41,7 +51,7 @@ public class HomePageHeader {
      */
     public AccountPage clickDeleteAccountButton() {
 
-        driver.element().click(deleteAccountButton);
+        driver.element().click(HomePageElements.deleteAccountButton());
         return new AccountPage(driver);
     }
 
@@ -52,7 +62,7 @@ public class HomePageHeader {
      */
     public SignUpAndLogInPage clickLogoutButton() {
 
-        driver.element().click(logoutButton);
+        driver.element().click(HomePageElements.logoutButton());
         return new SignUpAndLogInPage(driver);
     }
 
@@ -63,7 +73,7 @@ public class HomePageHeader {
      */
     public ContactUsPage clickContactUsButton() {
 
-        driver.element().click(contactUsButton);
+        driver.element().click(HomePageElements.contactUsButton());
         return new ContactUsPage(driver);
     }
 
@@ -74,7 +84,7 @@ public class HomePageHeader {
      */
     public TestCasesPage clickTestCasesButton() {
 
-        driver.element().click(testCasesButton);
+        driver.element().click(HomePageElements.testCasesButton());
         return new TestCasesPage(driver);
     }
 
@@ -85,7 +95,7 @@ public class HomePageHeader {
      */
     public ProductsPage clickProductsButton() {
 
-        driver.element().click(productsButton);
+        driver.element().click(HomePageElements.productsButton());
         return new ProductsPage(driver);
     }
 
@@ -96,7 +106,7 @@ public class HomePageHeader {
      */
     public CartPage clickCartButton() {
 
-        driver.element().click(cartButton);
+        driver.element().click(HomePageElements.cartButton());
         return new CartPage(driver);
     }
 

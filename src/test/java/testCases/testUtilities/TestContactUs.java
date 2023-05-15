@@ -19,9 +19,9 @@ public class TestContactUs extends BaseTest {
     @Test
     public void ContactUsForm() {
 
-        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
-        ContactUsPage contactUsPage = homePage.getHomePageHeader().clickContactUsButton();
+        ContactUsPage contactUsPage = homePage.clickContactUsButton();
 
         contactUsPage.verifyGetInTouchIsVisible();
 
@@ -41,7 +41,7 @@ public class TestContactUs extends BaseTest {
 
         homePage = contactUsPage.clickHomeButton();
 
-        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
     }
 
 }

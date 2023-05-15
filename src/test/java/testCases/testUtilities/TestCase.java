@@ -9,9 +9,9 @@ public class TestCase extends BaseTest {
     @Test
     public void VerifyTestCasesPage() {
 
-        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
-        TestCasesPage testCasesPage = homePage.getHomePageHeader().clickTestCasesButton();
+        TestCasesPage testCasesPage = homePage.clickTestCasesButton();
 
         testCasesPage.VerifyUserIsNavigatedToTestCasesPageSuccessfully();
     }

@@ -21,10 +21,10 @@ public class TestCart extends BaseTest {
         int numberOfProductWillAdd = 2;
 
         //Verify that home page is visible successfully.
-        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
         //Click Products button.
-        ProductsPage productsPage = homePage.getHomePageHeader().clickProductsButton();
+        ProductsPage productsPage = homePage.clickProductsButton();
 
         //Save the first product price in the product page.
         String firstItemPrice = productsPage.verifyFirstItemPrice();

@@ -23,9 +23,9 @@ public class TestSearch extends BaseTest {
     @Test
     public void SearchProduct() throws InterruptedException {
 
-        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
-        ProductsPage productsPage = homePage.getHomePageHeader().clickProductsButton();
+        ProductsPage productsPage = homePage.clickProductsButton();
 
         productsPage.saleImageIsVisible();
 
@@ -46,9 +46,9 @@ public class TestSearch extends BaseTest {
 
         addToCart = new AddToCart(super.driver);
 
-        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
-        ProductsPage productsPage = homePage.getHomePageHeader().clickProductsButton();
+        ProductsPage productsPage = homePage.clickProductsButton();
 
         productsPage.saleImageIsVisible();
 
@@ -68,7 +68,7 @@ public class TestSearch extends BaseTest {
 
         cartPage.verifyNumberOfItemInCart(1);
 
-        SignUpAndLogInPage signUpAndLogInPage = homePage.getHomePageHeader().clickSignUpAndLoginButton();
+        SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
 
         signUpAndLogInPage.verifyLoginToYourAccountIsVisible();
 
@@ -79,7 +79,7 @@ public class TestSearch extends BaseTest {
 
         homePage = signUpAndLogInPage.clickLoginButton();
 
-        cartPage = homePage.getHomePageHeader().clickCartButton();
+        cartPage = homePage.clickCartButton();
 
         cartPage.verifyNumberOfItemInCart(1);
 

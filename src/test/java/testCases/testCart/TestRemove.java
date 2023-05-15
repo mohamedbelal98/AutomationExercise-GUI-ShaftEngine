@@ -14,13 +14,13 @@ public class TestRemove extends BaseTest {
 
         addToCart = new AddToCart(super.driver);
 
-        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
         addToCart.hoverAndClickInFirstProduct();
 
         addToCart.clickOnContinueButton();
 
-        CartPage cartPage = homePage.getHomePageHeader().clickCartButton();
+        CartPage cartPage = homePage.clickCartButton();
 
         cartPage.deleteProductFromCart();
 

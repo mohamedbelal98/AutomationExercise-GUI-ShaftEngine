@@ -2,7 +2,7 @@ package base;
 
 import com.shaft.driver.SHAFT;
 import org.testng.annotations.BeforeClass;
-import pages.homePageUtli.HomePage;
+import pages.homePage.HomePage;
 
 public class BaseTest {
 

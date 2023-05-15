@@ -14,7 +14,7 @@ public class TestCategoryAndBrand extends BaseTest {
 
         leftSideBar = new LeftSideBar(super.driver);
 
-        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
         leftSideBar.verifyCategoryTextIsVisible();
 
@@ -36,7 +36,7 @@ public class TestCategoryAndBrand extends BaseTest {
 
         leftSideBar = new LeftSideBar(super.driver);
 
-        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
         leftSideBar.verifyBrandTextIsVisible();
 

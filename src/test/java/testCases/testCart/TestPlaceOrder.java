@@ -29,7 +29,7 @@ public class TestPlaceOrder extends BaseTest {
 
         addToCart = new AddToCart(super.driver);
 
-        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
         addToCart.hoverAndClickInFirstProduct();
 
@@ -82,9 +82,9 @@ public class TestPlaceOrder extends BaseTest {
 
         homePage = accountPage.clickContinueButton();
 
-        homePage.getHomePageVerification().verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("loginName"));
+        homePage.verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("loginName"));
 
-        cartPage = homePage.getHomePageHeader().clickCartButton();
+        cartPage = homePage.clickCartButton();
 
         CheckOutPage checkOutPage = cartPage.clickProceedToCheckOut();
 
@@ -117,9 +117,9 @@ public class TestPlaceOrder extends BaseTest {
 
         addToCart = new AddToCart(super.driver);
 
-        homePage.getHomePageVerification().verifyThatHomePageIsVisibleSuccessfully();
+        homePage.verifyThatHomePageIsVisibleSuccessfully();
 
-        SignUpAndLogInPage signUpAndLogInPage = homePage.getHomePageHeader().clickSignUpAndLoginButton();
+        SignUpAndLogInPage signUpAndLogInPage = homePage.clickSignUpAndLoginButton();
 
         signUpAndLogInPage.verifyNewUserSignupIsVisible();
 
@@ -162,7 +162,7 @@ public class TestPlaceOrder extends BaseTest {
 
         homePage = accountPage.clickContinueButton();
 
-        homePage.getHomePageVerification().verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("loginName"));
+        homePage.verifyThatLoggedInAsIsVisible(jsonFileManager.getTestData("loginName"));
 
         addToCart.hoverAndClickInFirstProduct();
 
@@ -172,7 +172,7 @@ public class TestPlaceOrder extends BaseTest {
 
         addToCart.clickOnContinueButton();
 
-        CartPage cartPage = homePage.getHomePageHeader().clickCartButton();
+        CartPage cartPage = homePage.clickCartButton();
 
         CheckOutPage checkOutPage = cartPage.clickProceedToCheckOut();
 
@@ -194,7 +194,7 @@ public class TestPlaceOrder extends BaseTest {
 
         accountPage.verifyThatOrderPlacedIsVisible();
 
-        accountPage = homePage.getHomePageHeader().clickDeleteAccountButton();
+        accountPage = homePage.clickDeleteAccountButton();
 
         accountPage.verifyThatAccountDeletedIsVisible();
 
